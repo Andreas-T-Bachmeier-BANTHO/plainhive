@@ -1,0 +1,25 @@
+<svg width="640" height="400" viewBox="0 0 640 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="400" rx="32" fill="#0B0E0C" />
+  <rect x="24" y="24" width="592" height="352" rx="26" fill="#111613" stroke="#1C2520" stroke-width="2" />
+  <rect x="52" y="52" width="536" height="56" rx="18" fill="#0B0E0C" stroke="#1C2520" />
+  <text x="72" y="85" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="18" fill="#F8FAF8">Engagement plan for Horizon Capital</text>
+  <rect x="72" y="100" width="180" height="8" rx="4" fill="#0EA371" />
+  <rect x="52" y="128" width="270" height="220" rx="20" fill="#0B0E0C" stroke="#1C2520" />
+  <text x="72" y="160" font-family="'Inter', sans-serif" font-size="14" fill="#9BA8A1">Reasoning threads</text>
+  <rect x="72" y="176" width="230" height="44" rx="14" fill="#111613" stroke="#1C2520" />
+  <text x="92" y="202" font-family="'Inter', sans-serif" font-size="13" fill="#F8FAF8">Thread A · Market outlook</text>
+  <rect x="72" y="228" width="230" height="44" rx="14" fill="#111613" stroke="#1C2520" />
+  <text x="92" y="254" font-family="'Inter', sans-serif" font-size="13" fill="#F8FAF8">Thread B · Risk register</text>
+  <rect x="72" y="280" width="230" height="44" rx="14" fill="#111613" stroke="#1C2520" />
+  <text x="92" y="306" font-family="'Inter', sans-serif" font-size="13" fill="#F8FAF8">Thread C · Advisory actions</text>
+  <rect x="344" y="128" width="244" height="104" rx="20" fill="#0B0E0C" stroke="#1C2520" />
+  <text x="364" y="160" font-family="'Inter', sans-serif" font-size="14" fill="#9BA8A1">Insights</text>
+  <text x="364" y="188" font-family="'Inter', sans-serif" font-size="13" fill="#F8FAF8">• Regulation shift flagged as high impact</text>
+  <text x="364" y="210" font-family="'Inter', sans-serif" font-size="13" fill="#9BA8A1">• Proposed mitigation timeline – 3 phases</text>
+  <rect x="344" y="252" width="244" height="96" rx="20" fill="#0B0E0C" stroke="#1C2520" />
+  <text x="364" y="284" font-family="'Inter', sans-serif" font-size="14" fill="#9BA8A1">Export</text>
+  <rect x="364" y="300" width="104" height="44" rx="14" fill="#0EA371" fill-opacity="0.16" stroke="#0EA371" />
+  <text x="382" y="327" font-family="'Inter', sans-serif" font-size="14" fill="#0EA371">PDF Brief</text>
+  <rect x="484" y="300" width="84" height="44" rx="14" fill="#111613" stroke="#1C2520" />
+  <text x="502" y="327" font-family="'Inter', sans-serif" font-size="14" fill="#F8FAF8">JSON</text>
+</svg>

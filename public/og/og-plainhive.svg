@@ -1,0 +1,12 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0B0E0C" />
+  <rect x="80" y="80" width="1040" height="470" rx="48" fill="#111613" stroke="#1C2520" stroke-width="4" />
+  <text x="140" y="220" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="72" fill="#F8FAF8">PlainHive</text>
+  <text x="140" y="304" font-family="Inter" font-size="32" fill="#9BA8A1">Transparent, multi-agent AI that thinks with you</text>
+  <text x="140" y="380" font-family="Inter" font-size="24" fill="#0EA371">Explainable by design • User-in-the-loop • Confidence badges</text>
+  <g transform="translate(820 170)">
+    <polygon points="100,0 200,58 200,174 100,232 0,174 0,58" fill="#0EA371" fill-opacity="0.16" stroke="#0EA371" stroke-width="6" />
+    <polygon points="100,30 166,68 166,146 100,184 34,146 34,68" fill="#0EA371" fill-opacity="0.26" />
+    <polygon points="100,70 142,94 142,126 100,150 58,126 58,94" fill="#0EA371" fill-opacity="0.5" />
+  </g>
+</svg>
