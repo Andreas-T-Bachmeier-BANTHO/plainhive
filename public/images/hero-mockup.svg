@@ -1,0 +1,31 @@
+<svg width="640" height="420" viewBox="0 0 640 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="420" rx="36" fill="#0B0E0C" />
+  <rect x="28" y="28" width="584" height="364" rx="24" fill="#111613" stroke="#1C2520" stroke-width="2" />
+  <rect x="52" y="60" width="168" height="44" rx="12" fill="#0EA371" fill-opacity="0.16" stroke="#0EA371" />
+  <text x="68" y="88" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="16" fill="#F8FAF8" letter-spacing="0.24em">PLAINHIVE</text>
+  <rect x="240" y="60" width="320" height="44" rx="12" fill="#0B0E0C" stroke="#1C2520" />
+  <text x="260" y="87" font-family="'Inter', sans-serif" font-size="15" fill="#9BA8A1">Ask PlainHive anything…</text>
+  <rect x="52" y="132" width="536" height="104" rx="20" fill="#0B0E0C" stroke="#1C2520" />
+  <text x="76" y="168" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="18" fill="#F8FAF8">Explain impact of new ESG policy on client portfolio</text>
+  <rect x="76" y="184" width="164" height="20" rx="10" fill="#0EA371" fill-opacity="0.16" />
+  <text x="88" y="199" font-family="'Inter', sans-serif" font-size="12" fill="#0EA371">Confidence · Medium-High</text>
+  <rect x="76" y="214" width="216" height="12" rx="6" fill="#1C2520" />
+  <rect x="76" y="214" width="156" height="12" rx="6" fill="#0EA371" />
+  <rect x="52" y="256" width="260" height="128" rx="18" fill="#0B0E0C" stroke="#1C2520" />
+  <text x="72" y="290" font-family="'Inter', sans-serif" font-size="14" fill="#9BA8A1">Agent Timeline</text>
+  <circle cx="96" cy="316" r="12" fill="#0EA371" fill-opacity="0.2" stroke="#0EA371" />
+  <text x="118" y="322" font-family="'Inter', sans-serif" font-size="13" fill="#F8FAF8">Retrieval</text>
+  <circle cx="96" cy="348" r="12" fill="#38BDF8" fill-opacity="0.2" stroke="#38BDF8" />
+  <text x="118" y="354" font-family="'Inter', sans-serif" font-size="13" fill="#F8FAF8">Reasoning</text>
+  <circle cx="96" cy="380" r="12" fill="#FCD34D" fill-opacity="0.2" stroke="#FCD34D" />
+  <text x="118" y="386" font-family="'Inter', sans-serif" font-size="13" fill="#F8FAF8">Verification</text>
+  <rect x="332" y="256" width="256" height="128" rx="18" fill="#0B0E0C" stroke="#1C2520" />
+  <text x="352" y="290" font-family="'Inter', sans-serif" font-size="14" fill="#9BA8A1">Explainability Panel</text>
+  <rect x="352" y="308" width="216" height="68" rx="14" fill="#111613" stroke="#1C2520" />
+  <text x="372" y="332" font-family="'Inter', sans-serif" font-size="13" fill="#F8FAF8">“We compared EU Taxonomy clause 7.3 with</text>
+  <text x="372" y="352" font-family="'Inter', sans-serif" font-size="13" fill="#9BA8A1">latest client filings. 3 flagged assets require</text>
+  <text x="372" y="372" font-family="'Inter', sans-serif" font-size="13" fill="#9BA8A1">mitigation plans.”</text>
+  <rect x="484" y="148" width="84" height="32" rx="12" fill="#111613" stroke="#1C2520" />
+  <text x="500" y="169" font-family="'Inter', sans-serif" font-size="12" fill="#F8FAF8">Explain</text>
+  <rect x="580" y="148" width="8" height="32" rx="4" fill="#0EA371" />
+</svg>
