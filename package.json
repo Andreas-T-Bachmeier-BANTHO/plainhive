@@ -8,6 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "check:conflicts": "node scripts/check-conflicts.mjs"
+    "preview": "vite preview"
   },
   "dependencies": {
     "lucide-react": "^0.396.0",
