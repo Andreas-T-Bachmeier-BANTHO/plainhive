@@ -1,4 +1,5 @@
 export default function Logo({ showWordmark = true, className = '' }) {
+
   const baseClass = showWordmark ? 'h-9 w-auto' : 'h-9 w-9';
   const classes = [baseClass, className].filter(Boolean).join(' ');
 
@@ -22,5 +23,14 @@ export default function Logo({ showWordmark = true, className = '' }) {
       loading="lazy"
       decoding="async"
     />
+
+  return (
+    <span className={`inline-flex items-center gap-3 ${className}`}>
+      <img src="/brand/plainhive-mark.svg" alt="PlainHive" className="h-8 w-8" />
+      {showWordmark && (
+        <span className="text-lg font-semibold tracking-tight">PlainHive</span>
+      )}
+    </span>
+
   );
 }
