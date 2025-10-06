@@ -2,6 +2,18 @@ import Section from '../components/Section.jsx';
 
 const IMAGES = [
   {
+
+    src: '/images/hero-mockup.svg',
+    alt: 'Hero interface mockup with explainability panel',
+    caption: 'Hero workspace: see agent timeline, explainability, and confidence at once'
+  },
+  {
+    src: '/images/dashboard-mockup.svg',
+    alt: 'Dashboard mockup with reasoning threads and exports',
+    caption: 'Strategy dashboard: organize threads, insights, and export formats'
+  },
+  {
+
     src: '/images/agent-timeline.svg',
     alt: 'Agent timeline with cross-checks',
     caption: 'Agent timeline with cross-checks'

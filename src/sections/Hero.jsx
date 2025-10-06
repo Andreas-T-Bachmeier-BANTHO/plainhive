@@ -42,6 +42,31 @@ export default function Hero() {
           <p className="mt-4 text-xs text-ph-muted">No spam. Early access invites roll out in waves.</p>
         </div>
         <div className="relative md:w-5/12">
+
+          <div className="relative overflow-hidden rounded-3xl border border-ph-border/80 bg-black/40 shadow-subtle">
+            <img
+              src="/images/hero-mockup.svg"
+              alt="Mock interface of PlainHive showing agent timeline and explainability panel"
+              className="w-full"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <img
+            src="/images/agent-timeline.svg"
+            alt="Agent timeline visualization"
+            className="absolute -left-10 bottom-10 hidden w-40 rounded-2xl border border-ph-border/80 bg-ph-bg/80 p-3 shadow-lg md:block"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src="/images/explain-panel.svg"
+            alt="Explain panel showing reasoning transparency"
+            className="absolute -right-10 -top-12 hidden w-44 rounded-2xl border border-ph-border/80 bg-ph-bg/80 p-3 shadow-lg md:block"
+            loading="lazy"
+            decoding="async"
+          />
+
           <div className="relative rounded-3xl border border-ph-border/80 bg-ph-surface/70 p-8 shadow-subtle backdrop-blur">
             <div className="mb-6 flex items-center justify-between text-xs uppercase tracking-[0.3em] text-ph-muted">
               <span>Agent loop</span>
@@ -87,6 +112,7 @@ export default function Hero() {
           </div>
           <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full border border-ph-accent/40" />
           <div className="pointer-events-none absolute -bottom-16 right-8 h-20 w-20 rotate-6 rounded-full border border-ph-accent/20" />
+
         </div>
       </div>
     </section>

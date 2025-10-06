@@ -1,0 +1,50 @@
+<svg width="560" height="420" viewBox="0 0 560 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="560" height="420" rx="36" fill="#0B0E0C" />
+  <g opacity="0.9">
+    <path d="M88 148L184 88L276 140L224 232L120 228Z" fill="#0EA371" fill-opacity="0.08" stroke="#0EA371" stroke-width="2" />
+    <path d="M276 140L360 96L448 148L404 244L316 220Z" fill="#38BDF8" fill-opacity="0.08" stroke="#38BDF8" stroke-width="2" />
+    <path d="M224 232L320 284L248 348L140 320Z" fill="#FCD34D" fill-opacity="0.08" stroke="#FCD34D" stroke-width="2" />
+    <path d="M320 284L420 320L476 240L404 244Z" fill="#E879F9" fill-opacity="0.08" stroke="#E879F9" stroke-width="2" />
+  </g>
+  <g stroke="#1C2520" stroke-width="2">
+    <circle cx="184" cy="88" r="28" fill="#111613" />
+    <circle cx="276" cy="140" r="28" fill="#111613" />
+    <circle cx="224" cy="232" r="28" fill="#111613" />
+    <circle cx="120" cy="228" r="28" fill="#111613" />
+    <circle cx="360" cy="96" r="28" fill="#111613" />
+    <circle cx="448" cy="148" r="28" fill="#111613" />
+    <circle cx="404" cy="244" r="28" fill="#111613" />
+    <circle cx="320" cy="284" r="28" fill="#111613" />
+    <circle cx="248" cy="348" r="28" fill="#111613" />
+    <circle cx="140" cy="320" r="28" fill="#111613" />
+    <circle cx="420" cy="320" r="28" fill="#111613" />
+    <circle cx="476" cy="240" r="28" fill="#111613" />
+  </g>
+  <g font-family="'Inter', sans-serif" font-size="12" fill="#F8FAF8">
+    <text x="170" y="93">Retrieval</text>
+    <text x="262" y="145">Context</text>
+    <text x="207" y="237">Judge</text>
+    <text x="106" y="233">Collaborator</text>
+    <text x="346" y="101">Reasoner</text>
+    <text x="434" y="153">Prover</text>
+    <text x="389" y="249">Verifier</text>
+    <text x="306" y="289">Summarizer</text>
+    <text x="234" y="353">Evidence</text>
+    <text x="126" y="325">Sources</text>
+    <text x="406" y="325">Exporter</text>
+    <text x="462" y="245">Policy</text>
+  </g>
+  <g stroke="#0EA371" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 12">
+    <line x1="184" y1="88" x2="276" y2="140" />
+    <line x1="276" y1="140" x2="360" y2="96" />
+    <line x1="276" y1="140" x2="224" y2="232" />
+    <line x1="224" y1="232" x2="120" y2="228" />
+    <line x1="224" y1="232" x2="320" y2="284" />
+    <line x1="320" y1="284" x2="248" y2="348" />
+    <line x1="320" y1="284" x2="420" y2="320" />
+    <line x1="404" y1="244" x2="320" y2="284" />
+    <line x1="404" y1="244" x2="476" y2="240" />
+  </g>
+  <rect x="208" y="40" width="144" height="32" rx="16" fill="#0EA371" fill-opacity="0.16" />
+  <text x="236" y="61" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="14" fill="#0EA371">Blackboard network</text>
+</svg>

@@ -22,7 +22,11 @@ const STEPS = [
 export default function HowItWorks() {
   return (
     <Section id="how" eyebrow="Inside the hive" title="How PlainHive works">
+
+      <div className="grid gap-12 lg:grid-cols-[1.05fr,0.95fr] lg:items-center">
+
       <div className="grid gap-12 lg:grid-cols-[1.1fr,0.9fr] lg:items-center">
+
         <div className="space-y-6 text-lg text-ph-muted">
           <p>
             A shared <span className="text-white">blackboard</span> coordinates specialist agents—Retrieval, Reasoning, Verification, and
@@ -39,6 +43,27 @@ export default function HowItWorks() {
           </ul>
         </div>
         <div className="relative">
+
+          <figure className="overflow-hidden rounded-3xl border border-ph-border/80 bg-black/40 shadow-subtle">
+            <img
+              src="/images/agent-network.svg"
+              alt="Visualization of PlainHive agents connected through the blackboard network"
+              className="w-full"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption className="px-6 pb-6 text-sm text-ph-muted">
+              Blackboard network showing Retrieval, Reasoning, Verification, and oversight roles exchanging context.
+            </figcaption>
+          </figure>
+          <img
+            src="/images/role-selector.svg"
+            alt="Role selector for Judge, Collaborator, Prover, Consumer"
+            className="absolute -right-8 -bottom-10 hidden w-44 rounded-2xl border border-ph-border/80 bg-ph-bg/80 p-3 shadow-lg lg:block"
+            loading="lazy"
+            decoding="async"
+          />
+
           <div className="relative overflow-hidden rounded-3xl border border-ph-border/80 bg-gradient-to-br from-black via-ph-surface to-black p-8 shadow-subtle">
             <div className="text-sm uppercase tracking-[0.35em] text-ph-muted">Blackboard orchestration</div>
             <div className="mt-6 grid gap-4 text-sm">
@@ -63,6 +88,7 @@ export default function HowItWorks() {
             </div>
           </div>
           <div className="pointer-events-none absolute -bottom-8 -left-6 h-32 w-32 rounded-full border border-ph-accent/20" />
+
         </div>
       </div>
     </Section>
