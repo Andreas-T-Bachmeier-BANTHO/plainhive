@@ -16,16 +16,15 @@ const USE_CASES = [
 ];
 
 export default function UseCases() {
+  const cardClasses =
+    'rounded-2xl border border-ph-border/80 bg-ph-surface/70 p-6 shadow-subtle transition hover:-translate-y-1 hover:border-ph-accent/60';
+
   return (
     <Section eyebrow="Built for expert work" title="Where PlainHive shines">
-
       <div className="grid gap-10 lg:grid-cols-[1.05fr,0.95fr] lg:items-center">
         <div className="grid gap-6">
           {USE_CASES.map((useCase) => (
-            <article
-              key={useCase.title}
-              className="rounded-2xl border border-ph-border/80 bg-ph-surface/70 p-6 shadow-subtle transition hover:-translate-y-1 hover:border-ph-accent/60"
-            >
+            <article key={useCase.title} className={cardClasses}>
               <h3 className="text-xl font-semibold text-white">{useCase.title}</h3>
               <p className="mt-3 text-sm text-ph-muted">{useCase.description}</p>
             </article>
@@ -43,18 +42,6 @@ export default function UseCases() {
             Compose strategy deliverables with PlainHive’s multi-thread reasoning workspace and export-ready outputs.
           </figcaption>
         </figure>
-
-      <div className="grid gap-6 lg:grid-cols-3">
-        {USE_CASES.map((useCase) => (
-          <article
-            key={useCase.title}
-            className="rounded-2xl border border-ph-border/80 bg-ph-surface/70 p-6 shadow-subtle transition hover:-translate-y-1 hover:border-ph-accent/60"
-          >
-            <h3 className="text-xl font-semibold text-white">{useCase.title}</h3>
-            <p className="mt-3 text-sm text-ph-muted">{useCase.description}</p>
-          </article>
-        ))}
-
       </div>
     </Section>
   );

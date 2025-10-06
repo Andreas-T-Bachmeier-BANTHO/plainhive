@@ -42,7 +42,6 @@ export default function Hero() {
           <p className="mt-4 text-xs text-ph-muted">No spam. Early access invites roll out in waves.</p>
         </div>
         <div className="relative md:w-5/12">
-
           <div className="relative overflow-hidden rounded-3xl border border-ph-border/80 bg-black/40 shadow-subtle">
             <img
               src="/images/hero-mockup.svg"
@@ -66,53 +65,6 @@ export default function Hero() {
             loading="lazy"
             decoding="async"
           />
-
-          <div className="relative rounded-3xl border border-ph-border/80 bg-ph-surface/70 p-8 shadow-subtle backdrop-blur">
-            <div className="mb-6 flex items-center justify-between text-xs uppercase tracking-[0.3em] text-ph-muted">
-              <span>Agent loop</span>
-              <span>Transparency mode</span>
-            </div>
-            <div className="grid gap-4 text-sm">
-              <div className="rounded-2xl border border-ph-border/80 bg-black/40 p-4">
-                <p className="text-xs uppercase tracking-[0.25em] text-ph-muted">Blackboard orchestration</p>
-                <p className="mt-2 font-medium text-white">Retrieval ⇢ Reasoning ⇢ Verification ⇢ Summaries</p>
-              </div>
-              <div className="rounded-2xl border border-ph-border/80 bg-black/30 p-4">
-                <div className="flex items-center justify-between text-xs text-ph-muted">
-                  <span>Explain</span>
-                  <span>Confidence</span>
-                </div>
-                <div className="mt-2 flex flex-wrap gap-2 text-xs">
-                  <span className="rounded-full bg-ph-accent/20 px-3 py-1 text-ph-accent">Sources linked</span>
-                  <span className="rounded-full bg-amber-500/20 px-3 py-1 text-amber-300">Uncertainty: Low</span>
-                  <span className="rounded-full bg-sky-500/20 px-3 py-1 text-sky-300">Cross-check passed</span>
-                </div>
-              </div>
-              <div className="rounded-2xl border border-ph-border/80 bg-black/30 p-4">
-                <div className="flex items-center justify-between text-xs text-ph-muted">
-                  <span>Role selector</span>
-                  <span>Active: Judge</span>
-                </div>
-                <div className="mt-3 grid grid-cols-2 gap-2 text-xs">
-                  {['Judge', 'Collaborator', 'Prover', 'Consumer'].map((role) => (
-                    <span
-                      key={role}
-                      className={`rounded-xl border px-3 py-2 text-center ${
-                        role === 'Judge'
-                          ? 'border-ph-accent bg-ph-accent/20 text-ph-accent'
-                          : 'border-ph-border/80 text-ph-muted'
-                      }`}
-                    >
-                      {role}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full border border-ph-accent/40" />
-          <div className="pointer-events-none absolute -bottom-16 right-8 h-20 w-20 rotate-6 rounded-full border border-ph-accent/20" />
-
         </div>
       </div>
     </section>
