@@ -1,9 +1,0 @@
-<svg width="360" height="120" viewBox="0 0 360 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="360" height="120" rx="24" fill="#0B0E0C" />
-  <g transform="translate(24 24)">
-    <path d="M60 0L102 24V72L60 96L18 72V24L60 0Z" stroke="#0EA371" stroke-width="6" fill="#0EA371" fill-opacity="0.12" />
-    <path d="M60 20L84 34V62L60 76L36 62V34L60 20Z" stroke="#0EA371" stroke-width="4" fill="#0EA371" fill-opacity="0.22" />
-    <path d="M60 44L70 50V62L60 68L50 62V50L60 44Z" fill="#0EA371" />
-  </g>
-  <text x="150" y="72" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="48" fill="#F8FAF8">PlainHive</text>
-</svg>
