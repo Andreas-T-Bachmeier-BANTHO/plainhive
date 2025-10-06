@@ -1,26 +1,40 @@
+import { useState } from 'react';
+
+const WORDMARK_SRC = '/brand/plainhive-logo.svg';
+const GLYPH_SRC = '/brand/plainhive-mark.svg';
+
 export default function Logo({ showWordmark = true, className = '' }) {
+  const [failed, setFailed] = useState(false);
   const baseClass = showWordmark ? 'h-9 w-auto' : 'h-9 w-9';
   const classes = [baseClass, className].filter(Boolean).join(' ');
 
-  if (showWordmark) {
+  if (failed) {
+    const fallbackClasses = [
+      baseClass,
+      className,
+      'inline-flex items-center justify-center text-lg font-semibold tracking-tight'
+    ]
+      .filter(Boolean)
+      .join(' ');
+
     return (
-      <img
-        src="/brand/plainhive-logo.svg"
-        alt="PlainHive logo"
-        className={classes}
-        loading="lazy"
-        decoding="async"
-      />
+      <span className={fallbackClasses}>
+        PlainHive
+      </span>
     );
   }
 
+  const src = showWordmark ? WORDMARK_SRC : GLYPH_SRC;
+  const alt = showWordmark ? 'PlainHive wordmark' : 'PlainHive mark';
+
   return (
     <img
-      src="/brand/plainhive-mark.svg"
-      alt="PlainHive mark"
+      src={src}
+      alt={alt}
       className={classes}
       loading="lazy"
       decoding="async"
+      onError={() => setFailed(true)}
     />
   );
 }
