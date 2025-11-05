@@ -10,6 +10,8 @@
     "prebuild": "node scripts/generate-report.mjs",
     "build": "vite build",
     "prepreview": "node scripts/generate-report.mjs",
+    "dev": "vite",
+    "build": "vite build",
     "preview": "vite preview",
     "check:conflicts": "node scripts/check-conflicts.mjs"
   },
