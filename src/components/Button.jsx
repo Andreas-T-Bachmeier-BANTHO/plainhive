@@ -18,6 +18,8 @@ export default function Button({ as: Component = 'button', variant = 'primary', 
 
   return (
     <Component {...finalProps}>
+  return (
+    <Component className={`${base} ${variants[variant]} ${className}`} disabled={disabled} {...props}>
       {children}
     </Component>
   );
