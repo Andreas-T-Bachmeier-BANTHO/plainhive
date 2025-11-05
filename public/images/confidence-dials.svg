@@ -1,3 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="200" viewBox="0 0 420 200" role="img" aria-labelledby="title desc">
+  <title id="title">PlainHive confidence dials</title>
+  <desc id="desc">Three circular gauges showing confidence for retrieval, reasoning, and verification.</desc>
+  <defs>
+    <linearGradient id="dialGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1AE7A7" />
+      <stop offset="100%" stop-color="#0EA371" />
+    </linearGradient>
+  </defs>
+  <rect width="420" height="200" rx="26" fill="#101D18" stroke="#173228" />
+  <g transform="translate(70 100)">
+    <circle r="64" fill="#0F1E18" stroke="#173228" stroke-width="2" />
+    <path d="M0 -48A48 48 0 0 1 40 28" stroke="url(#dialGradient)" stroke-width="12" fill="none" stroke-linecap="round" />
+    <text x="0" y="8" text-anchor="middle" font-family="'Inter', sans-serif" font-size="22" fill="#64FFC8" font-weight="600">82%</text>
+    <text x="0" y="32" text-anchor="middle" font-family="'Inter', sans-serif" font-size="12" fill="#8EA69C">Retrieval</text>
+  </g>
+  <g transform="translate(210 100)">
+    <circle r="64" fill="#0F1E18" stroke="#173228" stroke-width="2" />
+    <path d="M0 -48A48 48 0 0 1 46 10" stroke="url(#dialGradient)" stroke-width="12" fill="none" stroke-linecap="round" />
+    <text x="0" y="8" text-anchor="middle" font-family="'Inter', sans-serif" font-size="22" fill="#64FFC8" font-weight="600">74%</text>
+    <text x="0" y="32" text-anchor="middle" font-family="'Inter', sans-serif" font-size="12" fill="#8EA69C">Reasoning</text>
+  </g>
+  <g transform="translate(350 100)">
+    <circle r="64" fill="#0F1E18" stroke="#173228" stroke-width="2" />
+    <path d="M0 -48A48 48 0 0 1 36 36" stroke="url(#dialGradient)" stroke-width="12" fill="none" stroke-linecap="round" />
+    <text x="0" y="8" text-anchor="middle" font-family="'Inter', sans-serif" font-size="22" fill="#64FFC8" font-weight="600">68%</text>
+    <text x="0" y="32" text-anchor="middle" font-family="'Inter', sans-serif" font-size="12" fill="#8EA69C">Verification</text>
+  </g>
 <svg width="560" height="220" viewBox="0 0 560 220" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect width="560" height="220" rx="24" fill="#0B0E0C" />
   <rect x="24" y="28" width="512" height="164" rx="20" fill="#111613" stroke="#1C2520" stroke-width="2" />

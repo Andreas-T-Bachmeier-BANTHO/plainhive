@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+const WORDMARK_SRC = '/images/logo/plainhive-wordmark.svg';
+const GLYPH_SRC = '/images/logo/plainhive-icon.svg';
 const WORDMARK_SRC = '/brand/plainhive-logo.svg';
 const GLYPH_SRC = '/brand/plainhive-mark.svg';
 

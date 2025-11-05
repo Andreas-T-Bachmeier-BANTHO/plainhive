@@ -22,6 +22,12 @@ export default function Hero() {
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <Button
+              onClick={() => track('report_cta', { placement: 'hero' })}
+              as="a"
+              href="#report"
+              className="w-full sm:w-auto"
+            >
+              Download the report
               onClick={() => track('hero_cta', { placement: 'hero' })}
               as="a"
               href="#waitlist"
@@ -44,6 +50,8 @@ export default function Hero() {
         <div className="relative md:w-5/12">
           <div className="relative overflow-hidden rounded-3xl border border-ph-border/80 bg-black/40 shadow-subtle">
             <img
+              src="/images/graphics/hero-panel.svg"
+              alt="PlainHive interface showing reasoning threads, confidence, and agent timeline"
               src="/images/hero-mockup.svg"
               alt="Mock interface of PlainHive showing agent timeline and explainability panel"
               className="w-full"
@@ -52,6 +60,9 @@ export default function Hero() {
             />
           </div>
           <img
+            src="/images/graphics/agent-loop.svg"
+            alt="Diagram illustrating PlainHive's blackboard agent loop"
+            className="absolute -left-12 bottom-6 hidden w-48 rounded-3xl border border-ph-border/80 bg-ph-bg/90 p-4 shadow-lg md:block"
             src="/images/agent-timeline.svg"
             alt="Agent timeline visualization"
             className="absolute -left-10 bottom-10 hidden w-40 rounded-2xl border border-ph-border/80 bg-ph-bg/80 p-3 shadow-lg md:block"
@@ -59,6 +70,9 @@ export default function Hero() {
             decoding="async"
           />
           <img
+            src="/images/graphics/explainability-cascade.svg"
+            alt="Explainability cascade with citations and confidence chips"
+            className="absolute -right-16 -top-14 hidden w-56 rounded-3xl border border-ph-border/80 bg-ph-bg/90 p-4 shadow-lg md:block"
             src="/images/explain-panel.svg"
             alt="Explain panel showing reasoning transparency"
             className="absolute -right-10 -top-12 hidden w-44 rounded-2xl border border-ph-border/80 bg-ph-bg/80 p-3 shadow-lg md:block"

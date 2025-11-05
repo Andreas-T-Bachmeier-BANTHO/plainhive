@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="420" viewBox="0 0 680 420" role="img" aria-labelledby="title desc">
+  <title id="title">PlainHive insight dashboard</title>
+  <desc id="desc">A dashboard mockup with cards, metrics, and export actions.</desc>
+  <defs>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1AE7A7" />
+      <stop offset="100%" stop-color="#0EA371" />
+    </linearGradient>
+  </defs>
+  <rect width="680" height="420" rx="28" fill="#0B1511" stroke="#163027" />
+  <rect x="32" y="28" width="616" height="64" rx="18" fill="#0F1E18" stroke="#173228" />
+  <text x="56" y="68" font-family="'Space Grotesk', sans-serif" font-size="22" font-weight="600" fill="#F2FFF7">Engagement Insights</text>
+  <g transform="translate(560 44)">
+    <rect width="72" height="32" rx="12" fill="#12271F" stroke="#1AE7A7" />
+    <text x="36" y="22" font-family="'Inter', sans-serif" font-size="12" text-anchor="middle" fill="#64FFC8">Export</text>
+  </g>
+  <g transform="translate(32 116)">
+    <rect width="296" height="124" rx="20" fill="#101D18" stroke="#173228" />
+    <text x="24" y="44" font-family="'Inter', sans-serif" font-size="16" fill="#64FFC8" font-weight="600">Confidence trend</text>
+    <polyline points="24,84 72,76 120,92 168,68 216,74 264,62" fill="none" stroke="url(#accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <text x="256" y="108" font-family="'Inter', sans-serif" font-size="12" fill="#C9E7D7">+18% this week</text>
+  </g>
+  <g transform="translate(352 116)">
+    <rect width="296" height="124" rx="20" fill="#101D18" stroke="#173228" />
+    <text x="24" y="44" font-family="'Inter', sans-serif" font-size="16" fill="#64FFC8" font-weight="600">Explain button usage</text>
+    <rect x="24" y="66" width="80" height="32" rx="12" fill="#12271F" stroke="#1AE7A7" />
+    <text x="64" y="86" text-anchor="middle" font-family="'Inter', sans-serif" font-size="12" fill="#C9E7D7">42%</text>
+    <rect x="124" y="66" width="80" height="32" rx="12" fill="#12271F" stroke="#1AE7A7" opacity="0.6" />
+    <text x="164" y="86" text-anchor="middle" font-family="'Inter', sans-serif" font-size="12" fill="#C9E7D7">Judge</text>
+    <rect x="224" y="66" width="48" height="32" rx="12" fill="#12271F" stroke="#1AE7A7" opacity="0.4" />
+    <text x="248" y="86" text-anchor="middle" font-family="'Inter', sans-serif" font-size="12" fill="#C9E7D7">Prover</text>
+  </g>
+  <g transform="translate(32 260)">
+    <rect width="616" height="128" rx="22" fill="#101D18" stroke="#173228" />
+    <text x="24" y="48" font-family="'Inter', sans-serif" font-size="16" fill="#64FFC8" font-weight="600">Team feedback</text>
+    <text x="24" y="78" font-family="'Inter', sans-serif" font-size="13" fill="#BEE9D6">“Transparent sourcing keeps our legal reviewers comfortable signing off.”</text>
+    <text x="24" y="104" font-family="'Inter', sans-serif" font-size="12" fill="#708478">— Director of Policy, EU practice</text>
+    <g transform="translate(420 48)">
+      <rect width="160" height="48" rx="16" fill="url(#accent)" />
+      <text x="80" y="30" font-family="'Inter', sans-serif" font-size="14" text-anchor="middle" fill="#04140D" font-weight="600">Share summary</text>
+    </g>
+  </g>
+</svg>
