@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="320" viewBox="0 0 420 320" role="img" aria-labelledby="title desc">
+  <title id="title">PlainHive explain panel</title>
+  <desc id="desc">Explain view with reasoning steps, citations, and confidence chips.</desc>
+  <defs>
+    <linearGradient id="explainGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1AE7A7" />
+      <stop offset="100%" stop-color="#0EA371" />
+    </linearGradient>
+  </defs>
+  <rect width="420" height="320" rx="26" fill="#101D18" stroke="#173228" />
+  <g transform="translate(28 28)">
+    <text x="0" y="0" font-family="'Inter', sans-serif" font-size="16" fill="#F2FFF7" font-weight="600">Explain</text>
+    <text x="0" y="26" font-family="'Inter', sans-serif" font-size="12" fill="#8EA69C">Confidence 0.82 · 3 verifications</text>
+  </g>
+  <g transform="translate(28 72)">
+    <rect width="364" height="72" rx="18" fill="#0E1914" stroke="#173228" />
+    <text x="24" y="28" font-family="'Inter', sans-serif" font-size="13" fill="#C9E7D7">Step 1 · Retrieval aggregator compiled 12 policy documents.</text>
+    <text x="24" y="52" font-family="'Inter', sans-serif" font-size="12" fill="#8EA69C">Sources: eur-lex.europa.eu, client-archive/reg-2024</text>
+  </g>
+  <g transform="translate(28 156)">
+    <rect width="364" height="72" rx="18" fill="#0E1914" stroke="#173228" />
+    <text x="24" y="28" font-family="'Inter', sans-serif" font-size="13" fill="#C9E7D7">Step 2 · Reasoner synthesised compliance roadmap.</text>
+    <text x="24" y="52" font-family="'Inter', sans-serif" font-size="12" fill="#8EA69C">Verifier requested explicit references for sections 3 & 4.</text>
+  </g>
+  <g transform="translate(28 240)">
+    <rect width="364" height="52" rx="18" fill="#12271F" stroke="#1AE7A7" />
+    <text x="32" y="32" font-family="'Inter', sans-serif" font-size="12" fill="#64FFC8">Confidence chips · 0.82 overall · 0.91 regulatory, 0.74 market</text>
+    <g transform="translate(284 14)">
+      <rect width="72" height="28" rx="12" fill="url(#explainGradient)" />
+      <text x="36" y="20" text-anchor="middle" font-family="'Inter', sans-serif" font-size="12" fill="#04140D" font-weight="600">Export</text>
+    </g>
+  </g>
+</svg>
