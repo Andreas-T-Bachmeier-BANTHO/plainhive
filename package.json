@@ -1,0 +1,30 @@
+{
+  "name": "plainhive",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "description": "Landing page for the PlainHive multi-agent AI assistant.",
+  "scripts": {
+    "predev": "node scripts/generate-report.mjs",
+    "dev": "vite",
+    "prebuild": "node scripts/generate-report.mjs",
+    "build": "vite build",
+    "prepreview": "node scripts/generate-report.mjs",
+    "preview": "vite preview",
+    "check:conflicts": "node scripts/check-conflicts.mjs"
+  },
+  "dependencies": {
+    "lucide-react": "^0.396.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.15",
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.41",
+    "tailwindcss": "^3.4.13",
+    "vite": "^5.4.1"
+  }
+}
