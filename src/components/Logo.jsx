@@ -1,12 +1,15 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 
-const WORDMARK_SRC = '/brand/plainhive-logo.svg';
+const WORDMARK_SRC = '/images/logo/Logo_Text_PlainHive_white.png';
 const GLYPH_SRC = '/brand/plainhive-mark.svg';
 
 export default function Logo({ showWordmark = true, className = '' }) {
   const [failed, setFailed] = useState(false);
   const baseClass = showWordmark ? 'h-9 w-auto' : 'h-9 w-9';
   const classes = [baseClass, className].filter(Boolean).join(' ');
+
+  const src = useMemo(() => (showWordmark ? WORDMARK_SRC : GLYPH_SRC), [showWordmark]);
+  const alt = showWordmark ? 'PlainHive wordmark' : 'PlainHive mark';
 
   if (failed) {
     const fallbackClasses = [
@@ -23,9 +26,6 @@ export default function Logo({ showWordmark = true, className = '' }) {
       </span>
     );
   }
-
-  const src = showWordmark ? WORDMARK_SRC : GLYPH_SRC;
-  const alt = showWordmark ? 'PlainHive wordmark' : 'PlainHive mark';
 
   return (
     <img
