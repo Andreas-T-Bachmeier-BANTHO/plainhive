@@ -22,14 +22,14 @@ export default function FeatureStrip() {
         </div>
         <figure className="w-full max-w-md overflow-hidden rounded-3xl border border-ph-border/80 bg-black/40 shadow-subtle">
           <img
-            src="/images/confidence-dials.svg"
-            alt="Confidence, coverage, and risk dials from PlainHive"
-            className="w-full"
+            src="/images/graphics/CoverReport.png"
+            alt="PlainHive concept cover showing layered intelligence report"
+            className="w-full object-cover"
             loading="lazy"
             decoding="async"
           />
           <figcaption className="px-5 pb-5 text-xs text-ph-muted md:text-sm">
-            Transparency-first indicators let you inspect confidence, evidence coverage, and residual risk at a glance.
+            Layered briefings blend qualitative insights and quantitative checks, ready to share with stakeholders.
           </figcaption>
         </figure>
       </div>
