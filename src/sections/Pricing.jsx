@@ -10,6 +10,11 @@ const TIERS = [
       'Transparency playbook updates',
       'Invite-only product briefings',
     ],
+    features: ['PlainHive report access', 'Transparency playbook updates', 'Invite-only product briefings']
+    name: 'Waitlist',
+    price: 'Free',
+    description: 'Early access rollout with guided onboarding and feedback loops.',
+    features: ['Priority invites', 'Research partner updates', 'Roadmap previews']
   },
   {
     name: 'Pro',
@@ -20,6 +25,7 @@ const TIERS = [
       'Explain + confidence dashboard',
       'Domain agent marketplace',
     ],
+    features: ['Unlimited projects', 'Explain + confidence dashboard', 'Domain agent marketplace']
   },
   {
     name: 'Team',
@@ -31,6 +37,8 @@ const TIERS = [
       'Custom domain agents',
     ],
   },
+    features: ['Role-based governance', 'Shared knowledge base', 'Custom domain agents']
+  }
 ];
 
 export default function Pricing() {
