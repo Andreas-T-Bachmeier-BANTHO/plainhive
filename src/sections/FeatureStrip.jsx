@@ -1,3 +1,7 @@
+import { useState } from 'react';
+
+import coverReportBase64 from '../data/coverReportBase64';
+
 const FEATURES = [
   'Confidence indicators',
   'Explain button',
@@ -7,6 +11,26 @@ const FEATURES = [
 ];
 
 export default function FeatureStrip() {
+  const [isDownloading, setIsDownloading] = useState(false);
+
+  const handleDownload = async () => {
+    try {
+      setIsDownloading(true);
+      const { PLAINHIVE_REPORT_BASE64 } = await import('../data/plainhiveReportBase64.js');
+      const link = document.createElement('a');
+      link.href = `data:application/pdf;base64,${PLAINHIVE_REPORT_BASE64.trim()}`;
+      link.download = 'PlainHive report why_AI_assistants_must_change.pdf';
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+    } catch (error) {
+      console.error('Report download failed', error);
+      window.alert('Sorry, the report could not be downloaded. Please try again later.');
+    } finally {
+      setIsDownloading(false);
+    }
+  };
+
   return (
     <section className="border-y border-ph-border/60 bg-black/30 py-12">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-8 px-6 md:flex-row md:items-start md:justify-between">
