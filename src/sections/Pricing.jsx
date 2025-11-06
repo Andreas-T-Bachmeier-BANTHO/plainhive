@@ -2,10 +2,6 @@ import Section from '../components/Section.jsx';
 
 const TIERS = [
   {
-    name: 'Research preview',
-    price: 'Free download',
-    description: 'Dive into the PlainHive report and get notified when private betas expand.',
-    features: ['PlainHive report access', 'Transparency playbook updates', 'Invite-only product briefings']
     name: 'Waitlist',
     price: 'Free',
     description: 'Early access rollout with guided onboarding and feedback loops.',

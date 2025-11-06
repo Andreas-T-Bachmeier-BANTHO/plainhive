@@ -9,7 +9,6 @@ import UseCases from './sections/UseCases.jsx';
 import FeatureStrip from './sections/FeatureStrip.jsx';
 import Gallery from './sections/Gallery.jsx';
 import Pricing from './sections/Pricing.jsx';
-import Report from './sections/Report.jsx';
 import Waitlist from './sections/Waitlist.jsx';
 import FAQ from './sections/FAQ.jsx';
 import Footer from './sections/Footer.jsx';
@@ -57,7 +56,6 @@ export default function App() {
         <FeatureStrip />
         <Gallery />
         <Pricing />
-        <Report />
         <Waitlist />
         <FAQ />
       </main>

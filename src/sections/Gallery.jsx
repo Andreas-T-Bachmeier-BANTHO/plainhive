@@ -2,24 +2,6 @@ import Section from '../components/Section.jsx';
 
 const IMAGES = [
   {
-    src: '/images/graphics/hero-panel.svg',
-    alt: 'Hero interface mockup with explainability callouts',
-    caption: 'Hero workspace: reasoning threads, confidence overview, and agent debate'
-  },
-  {
-    src: '/images/graphics/insight-dashboard.svg',
-    alt: 'Dashboard mockup with insights and exports',
-    caption: 'Insight dashboard: monitor explain usage, confidence trends, and share outputs'
-  },
-  {
-    src: '/images/agent-network.svg',
-    alt: 'Agent network diagram',
-    caption: 'Blackboard network connecting retrieval, reasoning, verification, and user roles'
-  },
-  {
-    src: '/images/explain-panel.svg',
-    alt: 'Explainability cascade view',
-    caption: 'Explain view: trace each decision, see citations, and export proof'
     src: '/images/hero-mockup.svg',
     alt: 'Hero interface mockup with explainability panel',
     caption: 'Hero workspace: see agent timeline, explainability, and confidence at once'
@@ -42,7 +24,6 @@ const IMAGES = [
   {
     src: '/images/role-selector.svg',
     alt: 'Role selector for Judge, Collaborator, Prover, Consumer',
-    caption: 'Role selector: pick the oversight level for each task'
     caption: 'Role selector: Judge · Collaborator · Prover · Consumer'
   }
 ];

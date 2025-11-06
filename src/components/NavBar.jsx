@@ -58,13 +58,6 @@ export default function NavBar() {
           ))}
         </div>
         <div className="hidden md:block">
-          <a
-            href="#report"
-            onClick={() => track('nav_click', { target: 'nav_report' })}
-            className="inline-flex items-center rounded-xl border border-ph-border/80 bg-ph-surface/70 px-4 py-2 text-sm font-medium text-ph-muted transition hover:bg-ph-surface hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-ph-accent focus-visible:ring-offset-2 focus-visible:ring-offset-ph-bg"
-          >
-            Download report
-          </a>
           <Button
             as="a"
             href="#waitlist"
@@ -108,13 +101,6 @@ export default function NavBar() {
                 {item.label}
               </a>
             ))}
-            <a
-              href="#report"
-              onClick={() => handleNavClick('nav_report')}
-              className="inline-flex items-center justify-center rounded-xl border border-ph-border/80 bg-ph-surface/70 px-4 py-2 text-sm font-medium text-ph-muted transition hover:bg-ph-surface hover:text-white"
-            >
-              Download report
-            </a>
             <Button as="a" href="#waitlist" onClick={() => track('hero_cta', { placement: 'nav-mobile' })}>
               Join waitlist
             </Button>
