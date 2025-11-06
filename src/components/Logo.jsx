@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-import wordmarkBase64 from '../data/plainhiveWordmarkBase64';
-import glyphBase64 from '../data/plainhiveGlyphBase64';
+const WORDMARK_SRC = '/images/logo/Logo_Text_PlainHive_white.png';
+const GLYPH_SRC = '/images/logo/Logo_PlainHive_white.png';
 
 export default function Logo({ showWordmark = true, className = '' }) {
   const [failed, setFailed] = useState(false);
