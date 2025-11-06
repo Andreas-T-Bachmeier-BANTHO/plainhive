@@ -1,50 +1,97 @@
-<svg width="560" height="420" viewBox="0 0 560 420" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="560" height="420" rx="36" fill="#0B0E0C" />
-  <g opacity="0.9">
-    <path d="M88 148L184 88L276 140L224 232L120 228Z" fill="#0EA371" fill-opacity="0.08" stroke="#0EA371" stroke-width="2" />
-    <path d="M276 140L360 96L448 148L404 244L316 220Z" fill="#38BDF8" fill-opacity="0.08" stroke="#38BDF8" stroke-width="2" />
-    <path d="M224 232L320 284L248 348L140 320Z" fill="#FCD34D" fill-opacity="0.08" stroke="#FCD34D" stroke-width="2" />
-    <path d="M320 284L420 320L476 240L404 244Z" fill="#E879F9" fill-opacity="0.08" stroke="#E879F9" stroke-width="2" />
+<svg width="800" height="600" viewBox="0 0 560 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Blackboard network</title>
+  <desc id="desc">Labeled nodes connected by colored polygons and dashed directional lines.</desc>
+
+  <!-- ========= Defs: styles, glow, and arrowheads ========= -->
+  <defs>
+    <style>
+      .bg { fill:#0B0E0C }
+      .pill { fill:#0EA371; fill-opacity:.16 }
+      .outline { stroke:#1C2520; stroke-width:2 }
+      .node { fill:#111613 }
+      .label { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+               font-size:14px; fill:#F8FAF8; text-anchor:middle; dominant-baseline:middle; filter:url(#textGlow) }
+      .link { stroke:#0EA371; stroke-width:2; stroke-linecap:round; stroke-dasharray:8 10; marker-end:url(#arrow) }
+      .poly-g { fill-opacity:.10; stroke-width:2 }
+    </style>
+
+    <!-- soft glow to keep labels readable on dark backgrounds -->
+    <filter id="textGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1.6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- arrowhead for dashed links -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0EA371"/>
+    </marker>
+  </defs>
+
+  <!-- ========= Background & Title ========= -->
+  <rect class="bg" width="560" height="420" rx="36"/>
+  <rect x="200" y="28" width="160" height="34" rx="17" class="pill"/>
+  <text x="280" y="45" class="label" style="font-size:15px; fill:#0EA371; filter:none">Blackboard network</text>
+
+  <!-- ========= Group polygons (slightly translucent) ========= -->
+  <g opacity="0.95">
+    <path d="M88 148L184 88L276 140L224 232L120 228Z"
+          class="poly-g" fill="#0EA371" stroke="#0EA371"/>
+    <path d="M276 140L360 96L448 148L404 244L316 220Z"
+          class="poly-g" fill="#38BDF8" stroke="#38BDF8"/>
+    <path d="M224 232L320 284L248 348L140 320Z"
+          class="poly-g" fill="#FCD34D" stroke="#FCD34D"/>
+    <path d="M320 284L420 320L476 240L404 244Z"
+          class="poly-g" fill="#E879F9" stroke="#E879F9"/>
   </g>
-  <g stroke="#1C2520" stroke-width="2">
-    <circle cx="184" cy="88" r="28" fill="#111613" />
-    <circle cx="276" cy="140" r="28" fill="#111613" />
-    <circle cx="224" cy="232" r="28" fill="#111613" />
-    <circle cx="120" cy="228" r="28" fill="#111613" />
-    <circle cx="360" cy="96" r="28" fill="#111613" />
-    <circle cx="448" cy="148" r="28" fill="#111613" />
-    <circle cx="404" cy="244" r="28" fill="#111613" />
-    <circle cx="320" cy="284" r="28" fill="#111613" />
-    <circle cx="248" cy="348" r="28" fill="#111613" />
-    <circle cx="140" cy="320" r="28" fill="#111613" />
-    <circle cx="420" cy="320" r="28" fill="#111613" />
-    <circle cx="476" cy="240" r="28" fill="#111613" />
+
+  <!-- ========= Nodes ========= -->
+  <g class="outline">
+    <circle cx="184" cy="88" r="28" class="node"/>
+    <circle cx="276" cy="140" r="28" class="node"/>
+    <circle cx="224" cy="232" r="28" class="node"/>
+    <circle cx="120" cy="228" r="28" class="node"/>
+    <circle cx="360" cy="96" r="28" class="node"/>
+    <circle cx="448" cy="148" r="28" class="node"/>
+    <circle cx="404" cy="244" r="28" class="node"/>
+    <circle cx="320" cy="284" r="28" class="node"/>
+    <circle cx="248" cy="348" r="28" class="node"/>
+    <circle cx="140" cy="320" r="28" class="node"/>
+    <circle cx="420" cy="320" r="28" class="node"/>
+    <circle cx="476" cy="240" r="28" class="node"/>
   </g>
-  <g font-family="'Inter', sans-serif" font-size="12" fill="#F8FAF8">
-    <text x="170" y="93">Retrieval</text>
-    <text x="262" y="145">Context</text>
-    <text x="207" y="237">Judge</text>
-    <text x="106" y="233">Collaborator</text>
-    <text x="346" y="101">Reasoner</text>
-    <text x="434" y="153">Prover</text>
-    <text x="389" y="249">Verifier</text>
-    <text x="306" y="289">Summarizer</text>
-    <text x="234" y="353">Evidence</text>
-    <text x="126" y="325">Sources</text>
-    <text x="406" y="325">Exporter</text>
-    <text x="462" y="245">Policy</text>
+
+  <!-- ========= Labels (centered in nodes for readability) ========= -->
+  <g class="label">
+    <text x="184" y="88">Retrieval</text>
+    <text x="276" y="140">Context</text>
+    <text x="224" y="232">Judge</text>
+    <text x="120" y="228">Collaborator</text>
+    <text x="360" y="96">Reasoner</text>
+    <text x="448" y="148">Prover</text>
+    <text x="404" y="244">Verifier</text>
+    <text x="320" y="284">Summarizer</text>
+    <text x="248" y="348">Evidence</text>
+    <text x="140" y="320">Sources</text>
+    <text x="420" y="320">Exporter</text>
+    <text x="476" y="240">Policy</text>
   </g>
-  <g stroke="#0EA371" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 12">
-    <line x1="184" y1="88" x2="276" y2="140" />
-    <line x1="276" y1="140" x2="360" y2="96" />
-    <line x1="276" y1="140" x2="224" y2="232" />
-    <line x1="224" y1="232" x2="120" y2="228" />
-    <line x1="224" y1="232" x2="320" y2="284" />
-    <line x1="320" y1="284" x2="248" y2="348" />
-    <line x1="320" y1="284" x2="420" y2="320" />
-    <line x1="404" y1="244" x2="320" y2="284" />
-    <line x1="404" y1="244" x2="476" y2="240" />
+
+  <!-- ========= Dashed directional links with arrowheads ========= -->
+  <g class="link">
+    <line x1="184" y1="88"  x2="276" y2="140"/>
+    <line x1="276" y1="140" x2="360" y2="96"/>
+    <line x1="276" y1="140" x2="224" y2="232"/>
+    <line x1="224" y1="232" x2="120" y2="228"/>
+    <line x1="224" y1="232" x2="320" y2="284"/>
+    <line x1="320" y1="284" x2="248" y2="348"/>
+    <line x1="320" y1="284" x2="420" y2="320"/>
+    <line x1="404" y1="244" x2="320" y2="284"/>
+    <line x1="404" y1="244" x2="476" y2="240"/>
   </g>
+</svg>
   <rect x="208" y="40" width="144" height="32" rx="16" fill="#0EA371" fill-opacity="0.16" />
   <text x="236" y="61" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="14" fill="#0EA371">Blackboard network</text>
 </svg>
