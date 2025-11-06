@@ -6,15 +6,13 @@ const GLYPH_SRC = '/images/logo/Logo_PlainHive_white.png';
 export default function Logo({ showWordmark = true, className = '' }) {
   const [failed, setFailed] = useState(false);
   const baseClass = showWordmark ? 'h-9 w-auto' : 'h-9 w-9';
-  const combinedClassName = [baseClass, className].filter(Boolean).join(' ');
-  const imageSrc = showWordmark ? WORDMARK_SRC : GLYPH_SRC;
-  const altText = showWordmark ? 'PlainHive wordmark' : 'PlainHive mark';
+  const classes = [baseClass, className].filter(Boolean).join(' ');
 
   const src = useMemo(() => (showWordmark ? WORDMARK_SRC : GLYPH_SRC), [showWordmark]);
   const alt = showWordmark ? 'PlainHive wordmark' : 'PlainHive mark';
 
   if (failed) {
-    const fallbackClassName = [
+    const fallbackClasses = [
       baseClass,
       className,
       'inline-flex items-center justify-center text-lg font-semibold tracking-tight'
@@ -23,7 +21,7 @@ export default function Logo({ showWordmark = true, className = '' }) {
       .join(' ');
 
     return (
-      <span className={fallbackClassName}>
+      <span className={fallbackClasses}>
         PlainHive
       </span>
     );
@@ -36,9 +34,9 @@ export default function Logo({ showWordmark = true, className = '' }) {
 
   return (
     <img
-      src={imageSrc}
-      alt={altText}
-      className={combinedClassName}
+      src={src}
+      alt={alt}
+      className={classes}
       loading="lazy"
       decoding="async"
       onError={() => setFailed(true)}
