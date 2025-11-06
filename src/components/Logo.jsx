@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 
 const WORDMARK_SRC = '/images/logo/Logo_Text_PlainHive_white.png';
-const GLYPH_SRC = '/brand/plainhive-mark.svg';
+const GLYPH_SRC = '/images/logo/Logo_PlainHive_white.png';
 
 export default function Logo({ showWordmark = true, className = '' }) {
   const [failed, setFailed] = useState(false);
@@ -26,6 +26,11 @@ export default function Logo({ showWordmark = true, className = '' }) {
       </span>
     );
   }
+
+  const src = showWordmark
+    ? `data:image/png;base64,${wordmarkBase64}`
+    : `data:image/png;base64,${glyphBase64}`;
+  const alt = showWordmark ? 'PlainHive wordmark' : 'PlainHive mark';
 
   return (
     <img
