@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-const WORDMARK_SRC = '/brand/plainhive-logo.svg';
-const GLYPH_SRC = '/brand/plainhive-mark.svg';
+import wordmarkBase64 from '../data/plainhiveWordmarkBase64';
+import glyphBase64 from '../data/plainhiveGlyphBase64';
 
 export default function Logo({ showWordmark = true, className = '' }) {
   const [failed, setFailed] = useState(false);
@@ -24,7 +24,9 @@ export default function Logo({ showWordmark = true, className = '' }) {
     );
   }
 
-  const src = showWordmark ? WORDMARK_SRC : GLYPH_SRC;
+  const src = showWordmark
+    ? `data:image/png;base64,${wordmarkBase64}`
+    : `data:image/png;base64,${glyphBase64}`;
   const alt = showWordmark ? 'PlainHive wordmark' : 'PlainHive mark';
 
   return (

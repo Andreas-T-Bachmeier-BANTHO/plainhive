@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import Logo from './Logo.jsx';
-import Button from './Button.jsx';
 import { track } from '../lib/analytics.js';
 
 const NAV_ITEMS = [
@@ -8,7 +7,8 @@ const NAV_ITEMS = [
   { label: 'How it works', href: '#how', event: 'nav_how' },
   { label: 'Why PlainHive?', href: '#why', event: 'nav_why' },
   { label: 'Pricing', href: '#pricing', event: 'nav_pricing' },
-  { label: 'FAQ', href: '#faq', event: 'nav_faq' }
+  { label: 'FAQ', href: '#faq', event: 'nav_faq' },
+  { label: 'Contact', href: '#contact', event: 'nav_contact' }
 ];
 
 export default function NavBar() {
@@ -57,16 +57,6 @@ export default function NavBar() {
             </a>
           ))}
         </div>
-        <div className="hidden md:block">
-          <Button
-            as="a"
-            href="#waitlist"
-            onClick={() => track('hero_cta', { placement: 'nav' })}
-            className="!px-4 !py-2"
-          >
-            Join waitlist
-          </Button>
-        </div>
         <button
           className="flex h-10 w-10 items-center justify-center rounded-lg border border-ph-border text-ph-muted transition hover:text-white md:hidden"
           onClick={() => setOpen((prev) => !prev)}
@@ -101,9 +91,6 @@ export default function NavBar() {
                 {item.label}
               </a>
             ))}
-            <Button as="a" href="#waitlist" onClick={() => track('hero_cta', { placement: 'nav-mobile' })}>
-              Join waitlist
-            </Button>
           </div>
         </div>
       )}
