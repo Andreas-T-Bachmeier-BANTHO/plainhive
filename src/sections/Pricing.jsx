@@ -5,11 +5,6 @@ const TIERS = [
     name: 'Research preview',
     price: 'Free download',
     description: 'Dive into the PlainHive report and get notified when private betas expand.',
-    features: [
-      'PlainHive report access',
-      'Transparency playbook updates',
-      'Invite-only product briefings',
-    ],
     features: ['PlainHive report access', 'Transparency playbook updates', 'Invite-only product briefings']
     name: 'Waitlist',
     price: 'Free',
@@ -20,23 +15,12 @@ const TIERS = [
     name: 'Pro',
     price: 'Coming soon',
     description: 'Solo practitioners who need explainable depth without managing infrastructure.',
-    features: [
-      'Unlimited projects',
-      'Explain + confidence dashboard',
-      'Domain agent marketplace',
-    ],
     features: ['Unlimited projects', 'Explain + confidence dashboard', 'Domain agent marketplace']
   },
   {
     name: 'Team',
     price: 'Coming soon',
     description: 'Firms and teams needing governance, auditing, and collaborative workspaces.',
-    features: [
-      'Role-based governance',
-      'Shared knowledge base',
-      'Custom domain agents',
-    ],
-  },
     features: ['Role-based governance', 'Shared knowledge base', 'Custom domain agents']
   }
 ];
