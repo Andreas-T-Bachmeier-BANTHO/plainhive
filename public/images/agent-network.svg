@@ -92,6 +92,3 @@
     <line x1="404" y1="244" x2="476" y2="240"/>
   </g>
 </svg>
-  <rect x="208" y="40" width="144" height="32" rx="16" fill="#0EA371" fill-opacity="0.16" />
-  <text x="236" y="61" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="14" fill="#0EA371">Blackboard network</text>
-</svg>
