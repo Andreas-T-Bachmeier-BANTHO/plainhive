@@ -6,18 +6,6 @@ export default function Button({ as: Component = 'button', variant = 'primary', 
     ghost: 'text-ph-muted hover:text-white'
   };
 
-  const finalProps = {
-    className: `${base} ${variants[variant]} ${className}`.trim(),
-    disabled,
-    ...props
-  };
-
-  if (Component === 'button' && finalProps.type === undefined) {
-    finalProps.type = 'button';
-  }
-
-  return (
-    <Component {...finalProps}>
   return (
     <Component className={`${base} ${variants[variant]} ${className}`} disabled={disabled} {...props}>
       {children}
