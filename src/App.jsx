@@ -12,7 +12,6 @@ import Pricing from './sections/Pricing.jsx';
 import Contact from './sections/Contact.jsx';
 import FAQ from './sections/FAQ.jsx';
 import Footer from './sections/Footer.jsx';
-import CookieBanner from './components/CookieBanner.jsx';
 import { useEffect } from 'react';
 
 export default function App() {
@@ -61,7 +60,6 @@ export default function App() {
         <FAQ />
       </main>
       <Footer />
-      <CookieBanner />
     </div>
   );
 }

@@ -24,9 +24,7 @@ export default function Logo({ showWordmark = true, className = '' }) {
     );
   }
 
-  const src = showWordmark
-    ? `data:image/png;base64,${wordmarkBase64}`
-    : `data:image/png;base64,${glyphBase64}`;
+  const src = showWordmark ? WORDMARK_SRC : GLYPH_SRC;
   const alt = showWordmark ? 'PlainHive wordmark' : 'PlainHive mark';
 
   return (
