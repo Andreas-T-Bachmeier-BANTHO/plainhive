@@ -22,12 +22,12 @@ export default function Hero() {
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <Button
-              onClick={() => track('hero_cta', { placement: 'hero' })}
+              onClick={() => track('hero_contact', { placement: 'hero' })}
               as="a"
-              href="#waitlist"
+              href="#contact"
               className="w-full sm:w-auto"
             >
-              Join the waitlist
+              Get in touch
             </Button>
             <Button
               variant="secondary"
@@ -39,7 +39,7 @@ export default function Hero() {
               See how it works
             </Button>
           </div>
-          <p className="mt-4 text-xs text-ph-muted">No spam. Early access invites roll out in waves.</p>
+          <p className="mt-4 text-xs text-ph-muted">Ready for a conversation? Reach out when you’re exploring transparent AI workflows.</p>
         </div>
         <div className="relative md:w-5/12">
           <div className="relative overflow-hidden rounded-3xl border border-ph-border/80 bg-black/40 shadow-subtle">

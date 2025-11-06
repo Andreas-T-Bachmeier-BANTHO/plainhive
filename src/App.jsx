@@ -9,9 +9,10 @@ import UseCases from './sections/UseCases.jsx';
 import FeatureStrip from './sections/FeatureStrip.jsx';
 import Gallery from './sections/Gallery.jsx';
 import Pricing from './sections/Pricing.jsx';
-import Waitlist from './sections/Waitlist.jsx';
+import Contact from './sections/Contact.jsx';
 import FAQ from './sections/FAQ.jsx';
 import Footer from './sections/Footer.jsx';
+import CookieBanner from './components/CookieBanner.jsx';
 import { useEffect } from 'react';
 
 export default function App() {
@@ -56,10 +57,11 @@ export default function App() {
         <FeatureStrip />
         <Gallery />
         <Pricing />
-        <Waitlist />
+        <Contact />
         <FAQ />
       </main>
       <Footer />
+      <CookieBanner />
     </div>
   );
 }
