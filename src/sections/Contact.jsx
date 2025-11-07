@@ -1,16 +1,10 @@
 import Section from '../components/Section.jsx';
 
-const CONTACT_CARDS = [
-  {
-    label: 'Name',
-    value: 'Andreas T. Bachmeier'
-  },
-  {
-    label: 'Email',
-    value: 'andreas.bachmeier@cdi.eu',
-    href: 'mailto:andreas.bachmeier@cdi.eu'
-  }
-];
+const CONTACT_EMAIL = {
+  label: 'Email',
+  value: 'plainhive@gmail.com',
+  href: 'mailto:plainhive@gmail.com'
+};
 
 export default function Contact() {
   return (
@@ -43,25 +37,16 @@ export default function Contact() {
       <div className="mx-auto max-w-3xl text-lg text-ph-muted">
         We partner with teams who need transparent, multi-agent intelligence. Reach out directly and we’ll schedule time to explore your goals.
       </div>
-      <div className="relative mt-10 grid gap-6 sm:grid-cols-2">
-        {CONTACT_CARDS.map((card) => (
-          <div
-            key={card.label}
-            className="rounded-3xl border border-ph-border/80 bg-black/40 p-6 text-sm text-ph-muted shadow-subtle"
+      <div className="relative mt-10 flex justify-center">
+        <div className="w-full max-w-md rounded-3xl border border-ph-border/80 bg-black/40 p-6 text-center text-sm text-ph-muted shadow-subtle">
+          <p className="text-xs uppercase tracking-[0.2em] text-ph-muted/80">{CONTACT_EMAIL.label}</p>
+          <a
+            href={CONTACT_EMAIL.href}
+            className="mt-4 block text-lg font-semibold text-white transition hover:text-ph-accent"
           >
-            <p className="text-xs uppercase tracking-[0.2em] text-ph-muted/80">{card.label}</p>
-            {card.href ? (
-              <a
-                href={card.href}
-                className="mt-2 block text-lg font-semibold text-white transition hover:text-ph-accent"
-              >
-                {card.value}
-              </a>
-            ) : (
-              <p className="mt-2 text-lg font-semibold text-white">{card.value}</p>
-            )}
-          </div>
-        ))}
+            {CONTACT_EMAIL.value}
+          </a>
+        </div>
       </div>
     </Section>
   );
