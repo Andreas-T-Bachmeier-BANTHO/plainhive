@@ -1,4 +1,5 @@
 import Section from '../components/Section.jsx';
+import { assetUrl } from '../lib/assetUrl.js';
 
 const STEPS = [
   {
@@ -41,7 +42,7 @@ export default function HowItWorks() {
         <div className="relative">
           <figure className="overflow-hidden rounded-3xl border border-ph-border/80 bg-black/40 shadow-subtle">
             <img
-              src="/images/agent-network.svg"
+              src={assetUrl('images/agent-network.svg')}
               alt="Visualization of PlainHive agents connected through the blackboard network"
               className="w-full"
               loading="lazy"
@@ -52,7 +53,7 @@ export default function HowItWorks() {
             </figcaption>
           </figure>
           <img
-            src="/images/role-selector.svg"
+            src={assetUrl('images/role-selector.svg')}
             alt="Role selector for Judge, Collaborator, Prover, Consumer"
             className="absolute -right-8 -bottom-10 hidden w-44 rounded-2xl border border-ph-border/80 bg-ph-bg/80 p-3 shadow-lg lg:block"
             loading="lazy"

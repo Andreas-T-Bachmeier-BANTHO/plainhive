@@ -1,5 +1,6 @@
 import Button from '../components/Button.jsx';
 import { track } from '../lib/analytics.js';
+import { assetUrl } from '../lib/assetUrl.js';
 
 export default function Hero() {
   return (
@@ -44,7 +45,7 @@ export default function Hero() {
         <div className="relative md:w-5/12">
           <div className="relative overflow-hidden rounded-3xl border border-ph-border/80 bg-black/40 shadow-subtle">
             <img
-              src="/images/hero-mockup.svg"
+              src={assetUrl('images/hero-mockup.svg')}
               alt="Mock interface of PlainHive showing agent timeline and explainability panel"
               className="w-full"
               loading="lazy"
@@ -52,14 +53,14 @@ export default function Hero() {
             />
           </div>
           <img
-            src="/images/agent-timeline.svg"
+            src={assetUrl('images/agent-timeline.svg')}
             alt="Agent timeline visualization"
             className="absolute -left-10 bottom-10 hidden w-40 rounded-2xl border border-ph-border/80 bg-ph-bg/80 p-3 shadow-lg md:block"
             loading="lazy"
             decoding="async"
           />
           <img
-            src="/images/explain-panel.svg"
+            src={assetUrl('images/explain-panel.svg')}
             alt="Explain panel showing reasoning transparency"
             className="absolute -right-10 -top-12 hidden w-44 rounded-2xl border border-ph-border/80 bg-ph-bg/80 p-3 shadow-lg md:block"
             loading="lazy"

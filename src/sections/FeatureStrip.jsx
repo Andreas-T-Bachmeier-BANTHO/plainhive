@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { assetUrl } from '../lib/assetUrl.js';
 
 const FEATURES = [
   'Confidence indicators',
@@ -62,7 +63,7 @@ export default function FeatureStrip() {
         </div>
         <figure className="w-full max-w-md overflow-hidden rounded-3xl border border-ph-border/80 bg-black/40 shadow-subtle">
           <img
-            src="/images/graphics/CoverReport.png"
+            src={assetUrl('images/graphics/CoverReport.png')}
             alt="PlainHive concept cover showing layered intelligence report"
             className="w-full object-cover"
             loading="lazy"
