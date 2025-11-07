@@ -12,17 +12,15 @@
   <text x="92" y="254" font-family="'Inter', sans-serif" font-size="13" fill="#F8FAF8">Thread B · Risk register</text>
   <rect x="72" y="280" width="230" height="44" rx="14" fill="#111613" stroke="#1C2520" />
   <text x="92" y="306" font-family="'Inter', sans-serif" font-size="13" fill="#F8FAF8">Thread C · Advisory actions</text>
-  <rect x="344" y="128" width="244" height="104" rx="20" fill="#0B0E0C" stroke="#1C2520" />
+  <rect x="344" y="128" width="244" height="116" rx="20" fill="#0B0E0C" stroke="#1C2520" />
   <text x="364" y="160" font-family="'Inter', sans-serif" font-size="14" fill="#9BA8A1">Insights</text>
   <text font-family="'Inter', sans-serif" font-size="13" fill="#F8FAF8">
-    <tspan x="364" y="188">• Regulation shift flagged</tspan>
-    <tspan x="364" y="204">as high impact</tspan>
+    <tspan x="364" y="196">• Regulation Shift Flagged</tspan>
   </text>
   <text font-family="'Inter', sans-serif" font-size="13" fill="#9BA8A1">
-    <tspan x="364" y="216">• Proposed mitigation timeline</tspan>
-    <tspan x="364" y="232">– 3 phases</tspan>
+    <tspan x="364" y="228">• Proposed Mitigation Timeline</tspan>
   </text>
-  <rect x="344" y="252" width="244" height="96" rx="20" fill="#0B0E0C" stroke="#1C2520" />
+  <rect x="344" y="260" width="244" height="96" rx="20" fill="#0B0E0C" stroke="#1C2520" />
   <text x="364" y="284" font-family="'Inter', sans-serif" font-size="14" fill="#9BA8A1">Export</text>
   <rect x="364" y="300" width="104" height="44" rx="14" fill="#0EA371" fill-opacity="0.16" stroke="#0EA371" />
   <text x="382" y="327" font-family="'Inter', sans-serif" font-size="14" fill="#0EA371">PDF Brief</text>

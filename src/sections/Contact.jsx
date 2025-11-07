@@ -31,7 +31,7 @@ export default function Contact() {
         </div>
       </div>
       <div className="mx-auto max-w-3xl text-lg text-ph-muted">
-        Reach out directly and we’ll schedule time to explore your goals.
+        If your teams want transparent, trustworthy AI, connect with PlainHive to map a plan—reach out and we’ll schedule time to explore how our explainable workspace advances your goals.
       </div>
       <div className="relative mt-10 flex justify-center">
         <div
