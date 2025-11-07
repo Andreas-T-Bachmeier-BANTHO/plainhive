@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 import Section from '../components/Section.jsx';
 
 const CONTACT_LINES = [
@@ -9,12 +7,6 @@ const CONTACT_LINES = [
 ];
 
 export default function Contact() {
-  const [isVisible, setIsVisible] = useState(false);
-
-  const toggleVisibility = () => {
-    setIsVisible((prev) => !prev);
-  };
-
   return (
     <Section
       id="contact"
@@ -45,41 +37,31 @@ export default function Contact() {
       <div className="mx-auto max-w-3xl text-lg text-ph-muted">
         We partner with teams who need transparent, multi-agent intelligence. Reach out directly and we’ll schedule time to explore your goals.
       </div>
-      <div className="mt-10 flex justify-center">
-        <button
-          type="button"
-          onClick={toggleVisibility}
-          aria-expanded={isVisible}
-          aria-controls="contact-details"
-          className="rounded-full border border-ph-border/80 bg-black/40 px-8 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white transition hover:border-ph-accent hover:text-ph-accent"
+      <div className="relative mt-10 flex justify-center">
+        <div
+          id="contact-details"
+          className="w-full max-w-md rounded-3xl border border-ph-border/80 bg-black/40 p-6 text-center text-sm text-ph-muted shadow-subtle"
         >
-          Contact
-        </button>
-      </div>
-      {isVisible && (
-        <div id="contact-details" className="relative mt-10 flex justify-center">
-          <div className="w-full max-w-md rounded-3xl border border-ph-border/80 bg-black/40 p-6 text-center text-sm text-ph-muted shadow-subtle">
-            <p className="text-xs uppercase tracking-[0.2em] text-ph-muted/80">Direct contact</p>
-            <div className="mt-4 space-y-3">
-              {CONTACT_LINES.map((item) =>
-                item.href ? (
-                  <a
-                    key={item.value}
-                    href={item.href}
-                    className="block text-lg font-semibold text-white transition hover:text-ph-accent"
-                  >
-                    {item.value}
-                  </a>
-                ) : (
-                  <p key={item.value} className="text-lg font-semibold text-white">
-                    {item.value}
-                  </p>
-                )
-              )}
-            </div>
+          <p className="text-xs uppercase tracking-[0.2em] text-ph-muted/80">Direct contact</p>
+          <div className="mt-4 space-y-3">
+            {CONTACT_LINES.map((item) =>
+              item.href ? (
+                <a
+                  key={item.value}
+                  href={item.href}
+                  className="block text-lg font-semibold text-white transition hover:text-ph-accent"
+                >
+                  {item.value}
+                </a>
+              ) : (
+                <p key={item.value} className="text-lg font-semibold text-white">
+                  {item.value}
+                </p>
+              )
+            )}
           </div>
         </div>
-      )}
+      </div>
     </Section>
   );
 }

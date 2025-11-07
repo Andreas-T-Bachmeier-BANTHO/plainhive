@@ -20,15 +20,14 @@ export default function Hero() {
             <strong className="text-white">Collaborator</strong>, or <strong className="text-white">Prover</strong> and get outputs you can trust in
             high-stakes work.
           </p>
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <Button
-              onClick={() => track('hero_contact', { placement: 'hero' })}
-              as="a"
-              href="#contact"
-              className="w-full sm:w-auto"
+          <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+            <a
+              href="mailto:plainhive@gmail.com"
+              onClick={() => track('hero_contact_email_click')}
+              className="text-center text-lg font-semibold text-white transition hover:text-ph-accent sm:text-left"
             >
-              Get in touch
-            </Button>
+              plainhive@gmail.com
+            </a>
             <Button
               variant="secondary"
               as="a"
