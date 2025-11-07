@@ -1,28 +1,29 @@
 import Section from '../components/Section.jsx';
+import { assetUrl } from '../lib/assetUrl.js';
 
 const IMAGES = [
   {
-    src: '/images/hero-mockup.svg',
+    src: assetUrl('images/hero-mockup.svg'),
     alt: 'Hero interface mockup with explainability panel',
     caption: 'Hero workspace: see agent timeline, explainability, and confidence at once'
   },
   {
-    src: '/images/dashboard-mockup.svg',
+    src: assetUrl('images/dashboard-mockup.svg'),
     alt: 'Dashboard mockup with reasoning threads and exports',
     caption: 'Strategy dashboard: organize threads, insights, and export formats'
   },
   {
-    src: '/images/agent-timeline.svg',
+    src: assetUrl('images/agent-timeline.svg'),
     alt: 'Agent timeline with cross-checks',
     caption: 'Agent timeline with cross-checks'
   },
   {
-    src: '/images/explain-panel.svg',
+    src: assetUrl('images/explain-panel.svg'),
     alt: 'Explain view with sources and confidence',
     caption: 'Explain view: sources, reasoning steps, confidence'
   },
   {
-    src: '/images/role-selector.svg',
+    src: assetUrl('images/role-selector.svg'),
     alt: 'Role selector for Judge, Collaborator, Prover, Consumer',
     caption: 'Role selector: Judge · Collaborator · Prover · Consumer'
   }
