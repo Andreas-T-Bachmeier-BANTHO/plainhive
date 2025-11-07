@@ -28,32 +28,15 @@ export default function Footer() {
     <footer className="border-t border-ph-border/60 bg-black/30 py-12">
       <div className="mx-auto flex max-w-7xl flex-col gap-8 px-6 text-sm text-ph-muted md:flex-row md:items-center md:justify-between md:px-8">
         <Logo />
-        <details className="group w-full max-w-xs text-center text-sm md:text-left">
-          <summary className="cursor-pointer list-none text-xs uppercase tracking-[0.25em] text-ph-muted/80 transition hover:text-white">
-            Contact
-          </summary>
-          <div className="mt-3 space-y-1 text-sm text-ph-muted">
-            <p className="text-white">PlainHive</p>
-            <p className="text-white/80">Andreas T. Bachmeier</p>
-            <a
-              href="mailto:plainhive@gmail.com"
-              className="text-ph-accent transition hover:text-white"
-            >
-              plainhive@gmail.com
-            </a>
-          </div>
-        </details>
-        <nav className="flex flex-wrap items-center justify-center gap-6 md:justify-end">
-          <a
-            href="#privacy"
-            className="text-sm transition hover:text-white"
-            onClick={(event) => {
-              event.preventDefault();
-              setShowPrivacy(true);
-            }}
-          >
-            Privacy
+        <div className="flex flex-col gap-2 text-center md:text-left">
+          <p className="text-xs uppercase tracking-[0.25em] text-ph-muted/80">Contact</p>
+          <p className="text-sm text-white">Andreas T. Bachmeier</p>
+          <a href="mailto:andreas.bachmeier@cdi.eu" className="text-sm text-ph-accent transition hover:text-white">
+            andreas.bachmeier@cdi.eu
           </a>
+        </div>
+        <nav className="flex flex-wrap items-center justify-center gap-6 md:justify-end">
+          <a href="#" className="hover:text-white">Privacy</a>
         </nav>
         <p className="text-xs text-ph-muted">© {new Date().getFullYear()} PlainHive. Built for trustworthy AI.</p>
       </div>

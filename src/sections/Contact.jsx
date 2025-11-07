@@ -1,9 +1,18 @@
-import { useState } from 'react';
 import Section from '../components/Section.jsx';
 
-export default function Contact() {
-  const [isOpen, setIsOpen] = useState(false);
+const CONTACT_CARDS = [
+  {
+    label: 'Name',
+    value: 'Andreas T. Bachmeier'
+  },
+  {
+    label: 'Email',
+    value: 'andreas.bachmeier@cdi.eu',
+    href: 'mailto:andreas.bachmeier@cdi.eu'
+  }
+];
 
+export default function Contact() {
   return (
     <Section
       id="contact"
@@ -34,30 +43,25 @@ export default function Contact() {
       <div className="mx-auto max-w-3xl text-lg text-ph-muted">
         We partner with teams who need transparent, multi-agent intelligence. Reach out directly and we’ll schedule time to explore your goals.
       </div>
-      <div className="relative mt-10 max-w-xl">
-        <button
-          type="button"
-          onClick={() => setIsOpen((prev) => !prev)}
-          className="flex w-full items-center justify-between rounded-3xl border border-ph-border/80 bg-black/40 px-6 py-5 text-left text-sm font-semibold uppercase tracking-[0.25em] text-white transition hover:border-ph-accent/60 hover:text-ph-accent"
-          aria-expanded={isOpen}
-        >
-          Contact details
-          <span className="text-lg" aria-hidden="true">
-            {isOpen ? '−' : '+'}
-          </span>
-        </button>
-        {isOpen && (
-          <div className="mt-4 space-y-1 rounded-3xl border border-ph-border/60 bg-black/60 p-6 text-sm text-ph-muted shadow-subtle">
-            <p className="text-white">PlainHive</p>
-            <p className="text-white/80">Andreas T. Bachmeier</p>
-            <a
-              href="mailto:plainhive@gmail.com"
-              className="font-medium text-ph-accent transition hover:text-white"
-            >
-              plainhive@gmail.com
-            </a>
+      <div className="relative mt-10 grid gap-6 sm:grid-cols-2">
+        {CONTACT_CARDS.map((card) => (
+          <div
+            key={card.label}
+            className="rounded-3xl border border-ph-border/80 bg-black/40 p-6 text-sm text-ph-muted shadow-subtle"
+          >
+            <p className="text-xs uppercase tracking-[0.2em] text-ph-muted/80">{card.label}</p>
+            {card.href ? (
+              <a
+                href={card.href}
+                className="mt-2 block text-lg font-semibold text-white transition hover:text-ph-accent"
+              >
+                {card.value}
+              </a>
+            ) : (
+              <p className="mt-2 text-lg font-semibold text-white">{card.value}</p>
+            )}
           </div>
-        )}
+        ))}
       </div>
     </Section>
   );
