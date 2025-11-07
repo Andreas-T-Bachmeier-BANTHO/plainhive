@@ -18,7 +18,7 @@ export default function Footer() {
   const [showContact, setShowContact] = useState(false);
 
   useEffect(() => {
-    const handleOpen = () => setActiveModal('privacy');
+    const handleOpen = () => setShowPrivacy(true);
     window.addEventListener(PRIVACY_EVENT, handleOpen);
     return () => window.removeEventListener(PRIVACY_EVENT, handleOpen);
   }, []);
@@ -33,17 +33,8 @@ export default function Footer() {
         body.style.overflow = originalOverflow;
       };
     }
-
-    const { body } = document;
-    const originalOverflow = body.style.overflow;
-    body.style.overflow = 'hidden';
-
-    return () => {
-      body.style.overflow = originalOverflow;
-    };
-  }, [activeModal]);
-
-  const closeModal = () => setActiveModal(null);
+    return undefined;
+  }, [showPrivacy]);
 
   return (
     <footer className="border-t border-ph-border/60 bg-black/30 py-12">
@@ -107,8 +98,7 @@ export default function Footer() {
         </nav>
         <p className="text-xs text-ph-muted">© {new Date().getFullYear()} PlainHive. Built for trustworthy AI.</p>
       </div>
-      {activeModal === 'privacy' && <PrivacyModal onClose={closeModal} />}
-      {activeModal === 'contact' && <ContactModal onClose={closeModal} />}
+      {showPrivacy && <PrivacyModal onClose={() => setShowPrivacy(false)} />}
     </footer>
   );
 }
@@ -225,44 +215,6 @@ function PrivacyModal({ onClose }) {
             </p>
           </section>
         </div>
-      </div>
-    </div>
-  );
-}
-
-function ContactModal({ onClose }) {
-  return (
-    <div className="fixed inset-0 z-[999] flex items-center justify-center bg-black/80 px-4 py-10">
-      <div className="relative max-h-[85vh] w-full max-w-md overflow-y-auto rounded-3xl border border-ph-border/80 bg-ph-bg p-8 shadow-2xl">
-        <button
-          type="button"
-          className="absolute right-4 top-4 rounded-full border border-ph-border/60 bg-black/40 p-2 text-sm text-ph-muted transition hover:text-white"
-          onClick={onClose}
-          aria-label="Close contact details"
-        >
-          ✕
-        </button>
-        <h2 className="text-2xl font-semibold text-white">Contact PlainHive</h2>
-        <p className="mt-2 text-sm text-ph-muted">Reach out directly and we’ll respond soon.</p>
-        <dl className="mt-6 space-y-4 text-sm text-ph-muted">
-          {CONTACT_DETAILS.map((detail) => (
-            <div key={detail.label} className="flex flex-col gap-1">
-              <dt className="text-[0.65rem] uppercase tracking-[0.3em] text-ph-muted/70">{detail.label}</dt>
-              {detail.href ? (
-                <dd>
-                  <a
-                    href={detail.href}
-                    className="text-base font-semibold text-white transition hover:text-ph-accent"
-                  >
-                    {detail.value}
-                  </a>
-                </dd>
-              ) : (
-                <dd className="text-base font-semibold text-white">{detail.value}</dd>
-              )}
-            </div>
-          ))}
-        </dl>
       </div>
     </div>
   );
