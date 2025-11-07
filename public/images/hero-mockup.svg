@@ -11,7 +11,7 @@
   <text x="88" y="199" font-family="'Inter', sans-serif" font-size="12" fill="#0EA371">Confidence · Medium</text>
   <rect x="76" y="214" width="216" height="12" rx="6" fill="#1C2520" />
   <rect x="76" y="214" width="156" height="12" rx="6" fill="#0EA371" />
-  <rect x="52" y="256" width="272" height="128" rx="18" fill="#0B0E0C" stroke="#1C2520" />
+  <rect x="52" y="256" width="260" height="128" rx="18" fill="#0B0E0C" stroke="#1C2520" />
   <text x="72" y="290" font-family="'Inter', sans-serif" font-size="14" fill="#9BA8A1">Agent Steps</text>
   <circle cx="96" cy="316" r="12" fill="#0EA371" fill-opacity="0.2" stroke="#0EA371" />
   <text x="118" y="322" font-family="'Inter', sans-serif" font-size="13" fill="#F8FAF8">Retrieve</text>
@@ -21,7 +21,7 @@
   <text x="118" y="386" font-family="'Inter', sans-serif" font-size="13" fill="#F8FAF8">Verify</text>
   <rect x="332" y="256" width="256" height="128" rx="18" fill="#0B0E0C" stroke="#1C2520" />
   <text x="352" y="290" font-family="'Inter', sans-serif" font-size="14" fill="#9BA8A1">Explainability Panel</text>
-  <rect x="352" y="308" width="236" height="68" rx="14" fill="#111613" stroke="#1C2520" />
+  <rect x="352" y="308" width="216" height="68" rx="14" fill="#111613" stroke="#1C2520" />
   <text x="372" y="332" font-family="'Inter', sans-serif" font-size="13" fill="#F8FAF8">“Compared EU clause 7.3 with client filings.”</text>
   <text x="372" y="352" font-family="'Inter', sans-serif" font-size="13" fill="#9BA8A1">“Flagged three assets needing mitigation.”</text>
   <rect x="484" y="148" width="84" height="32" rx="12" fill="#111613" stroke="#1C2520" />
