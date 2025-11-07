@@ -3,8 +3,19 @@ import Logo from '../components/Logo.jsx';
 
 const PRIVACY_EVENT = 'plainhive:open-privacy';
 
+const CONTACT_DETAILS = [
+  { label: 'Organization', value: 'PlainHive' },
+  { label: 'Name', value: 'Andreas T. Bachmeier' },
+  {
+    label: 'Email',
+    value: 'plainhive@gmail.com',
+    href: 'mailto:plainhive@gmail.com'
+  }
+];
+
 export default function Footer() {
   const [showPrivacy, setShowPrivacy] = useState(false);
+  const [showContact, setShowContact] = useState(false);
 
   useEffect(() => {
     const handleOpen = () => setShowPrivacy(true);
@@ -14,6 +25,7 @@ export default function Footer() {
 
   useEffect(() => {
     if (showPrivacy) {
+      setShowContact(false);
       const { body } = document;
       const originalOverflow = body.style.overflow;
       body.style.overflow = 'hidden';
@@ -26,14 +38,54 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-ph-border/60 bg-black/30 py-12">
-      <div className="mx-auto flex max-w-7xl flex-col gap-8 px-6 text-sm text-ph-muted md:flex-row md:items-center md:justify-between md:px-8">
+      <div className="mx-auto flex max-w-7xl flex-col gap-8 px-6 text-sm text-ph-muted md:flex-row md:items-start md:justify-between md:px-8">
         <Logo />
-        <div className="flex flex-col gap-2 text-center md:text-left">
-          <p className="text-xs uppercase tracking-[0.25em] text-ph-muted/80">Contact</p>
-          <p className="text-sm text-white">Andreas T. Bachmeier</p>
-          <a href="mailto:andreas.bachmeier@cdi.eu" className="text-sm text-ph-accent transition hover:text-white">
-            andreas.bachmeier@cdi.eu
-          </a>
+        <div className="flex flex-col items-center gap-6 text-center md:items-end md:text-right">
+          <nav className="flex flex-wrap items-center justify-center gap-6 md:justify-end">
+            <button
+              type="button"
+              onClick={() => setShowContact((prev) => !prev)}
+              aria-expanded={showContact}
+              aria-controls="footer-contact-details"
+              className="bg-transparent text-ph-muted transition hover:text-white focus:outline-none"
+            >
+              Contact
+            </button>
+            <button
+              type="button"
+              onClick={() => setShowPrivacy(true)}
+              className="bg-transparent text-ph-muted transition hover:text-white focus:outline-none"
+            >
+              Privacy
+            </button>
+          </nav>
+          {showContact && (
+            <div
+              id="footer-contact-details"
+              className="w-full max-w-sm rounded-3xl border border-ph-border/80 bg-black/40 p-6 text-left text-sm text-ph-muted shadow-subtle"
+            >
+              <p className="text-xs uppercase tracking-[0.2em] text-ph-muted/80">Direct contact</p>
+              <dl className="mt-4 space-y-3">
+                {CONTACT_DETAILS.map((detail) => (
+                  <div key={detail.label} className="flex flex-col gap-1">
+                    <dt className="text-[0.65rem] uppercase tracking-[0.3em] text-ph-muted/70">{detail.label}</dt>
+                    {detail.href ? (
+                      <dd>
+                        <a
+                          href={detail.href}
+                          className="text-base font-semibold text-white transition hover:text-ph-accent"
+                        >
+                          {detail.value}
+                        </a>
+                      </dd>
+                    ) : (
+                      <dd className="text-base font-semibold text-white">{detail.value}</dd>
+                    )}
+                  </div>
+                ))}
+              </dl>
+            </div>
+          )}
         </div>
         <nav className="flex flex-wrap items-center justify-center gap-6 md:justify-end">
           <button
