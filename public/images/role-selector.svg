@@ -8,11 +8,15 @@
     <text x="546" y="178" font-family="Inter" font-size="16" fill="#0EA371">Active</text>
   </g>
   <g>
-    <rect x="72" y="228" width="576" height="80" rx="24" fill="#0B0E0C" stroke="#1C2520" stroke-width="1.5" />
-    <text x="104" y="276" font-family="Inter" font-size="18" fill="#9BA8A1">Collaborator</text>
+    <rect x="72" y="220" width="576" height="80" rx="24" fill="#0B0E0C" stroke="#1C2520" stroke-width="1.5" />
+    <text x="104" y="268" font-family="Inter" font-size="18" fill="#9BA8A1">Collaborator</text>
   </g>
   <g>
-    <rect x="72" y="324" width="576" height="80" rx="24" fill="#0B0E0C" stroke="#1C2520" stroke-width="1.5" />
-    <text x="104" y="372" font-family="Inter" font-size="18" fill="#9BA8A1">Prover</text>
+    <rect x="72" y="308" width="576" height="80" rx="24" fill="#0B0E0C" stroke="#1C2520" stroke-width="1.5" />
+    <text x="104" y="356" font-family="Inter" font-size="18" fill="#9BA8A1">Prover</text>
+  </g>
+  <g>
+    <rect x="72" y="396" width="576" height="80" rx="24" fill="#0B0E0C" stroke="#1C2520" stroke-width="1.5" />
+    <text x="104" y="444" font-family="Inter" font-size="18" fill="#9BA8A1">Consumer</text>
   </g>
 </svg>
