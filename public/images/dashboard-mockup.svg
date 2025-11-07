@@ -16,7 +16,11 @@
   <text x="364" y="160" font-family="'Inter', sans-serif" font-size="14" fill="#9BA8A1">Insights</text>
   <text font-family="'Inter', sans-serif" font-size="13" fill="#F8FAF8">
     <tspan x="364" y="188">• Regulation shift flagged</tspan>
-    <tspan x="364" y="208">• Proposed mitigation timeline</tspan>
+    <tspan x="364" y="204">as high impact</tspan>
+  </text>
+  <text font-family="'Inter', sans-serif" font-size="13" fill="#9BA8A1">
+    <tspan x="364" y="216">• Proposed mitigation timeline</tspan>
+    <tspan x="364" y="232">– 3 phases</tspan>
   </text>
   <rect x="344" y="252" width="244" height="96" rx="20" fill="#0B0E0C" stroke="#1C2520" />
   <text x="364" y="284" font-family="'Inter', sans-serif" font-size="14" fill="#9BA8A1">Export</text>
