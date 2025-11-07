@@ -18,14 +18,16 @@ export default function Footer() {
   const [showContact, setShowContact] = useState(false);
 
   useEffect(() => {
-    const handleOpen = () => setShowPrivacy(true);
+    const handleOpen = () => {
+      setShowContact(false);
+      setShowPrivacy(true);
+    };
     window.addEventListener(PRIVACY_EVENT, handleOpen);
     return () => window.removeEventListener(PRIVACY_EVENT, handleOpen);
   }, []);
 
   useEffect(() => {
-    if (showPrivacy) {
-      setShowContact(false);
+    if (showPrivacy || showContact) {
       const { body } = document;
       const originalOverflow = body.style.overflow;
       body.style.overflow = 'hidden';
@@ -34,7 +36,7 @@ export default function Footer() {
       };
     }
     return undefined;
-  }, [showPrivacy]);
+  }, [showPrivacy, showContact]);
 
   return (
     <footer className="border-t border-ph-border/60 bg-black/30 py-12">
@@ -44,61 +46,30 @@ export default function Footer() {
           <nav className="flex flex-wrap items-center justify-center gap-6 md:justify-end">
             <button
               type="button"
-              onClick={() => setShowContact((prev) => !prev)}
-              aria-expanded={showContact}
-              aria-controls="footer-contact-details"
+              onClick={() => {
+                setShowPrivacy(false);
+                setShowContact(true);
+              }}
               className="bg-transparent text-ph-muted transition hover:text-white focus:outline-none"
             >
               Contact
             </button>
             <button
               type="button"
-              onClick={() => setShowPrivacy(true)}
+              onClick={() => {
+                setShowContact(false);
+                setShowPrivacy(true);
+              }}
               className="bg-transparent text-ph-muted transition hover:text-white focus:outline-none"
             >
               Privacy
             </button>
           </nav>
-          {showContact && (
-            <div
-              id="footer-contact-details"
-              className="w-full max-w-sm rounded-3xl border border-ph-border/80 bg-black/40 p-6 text-left text-sm text-ph-muted shadow-subtle"
-            >
-              <p className="text-xs uppercase tracking-[0.2em] text-ph-muted/80">Direct contact</p>
-              <dl className="mt-4 space-y-3">
-                {CONTACT_DETAILS.map((detail) => (
-                  <div key={detail.label} className="flex flex-col gap-1">
-                    <dt className="text-[0.65rem] uppercase tracking-[0.3em] text-ph-muted/70">{detail.label}</dt>
-                    {detail.href ? (
-                      <dd>
-                        <a
-                          href={detail.href}
-                          className="text-base font-semibold text-white transition hover:text-ph-accent"
-                        >
-                          {detail.value}
-                        </a>
-                      </dd>
-                    ) : (
-                      <dd className="text-base font-semibold text-white">{detail.value}</dd>
-                    )}
-                  </div>
-                ))}
-              </dl>
-            </div>
-          )}
         </div>
-        <nav className="flex flex-wrap items-center justify-center gap-6 md:justify-end">
-          <button
-            type="button"
-            onClick={() => setShowPrivacy(true)}
-            className="bg-transparent text-ph-muted transition hover:text-white focus:outline-none"
-          >
-            Privacy
-          </button>
-        </nav>
         <p className="text-xs text-ph-muted">© {new Date().getFullYear()} PlainHive. Built for trustworthy AI.</p>
       </div>
       {showPrivacy && <PrivacyModal onClose={() => setShowPrivacy(false)} />}
+      {showContact && <ContactModal onClose={() => setShowContact(false)} />}
     </footer>
   );
 }
@@ -215,6 +186,43 @@ function PrivacyModal({ onClose }) {
             </p>
           </section>
         </div>
+      </div>
+    </div>
+  );
+}
+
+function ContactModal({ onClose }) {
+  return (
+    <div className="fixed inset-0 z-[999] flex items-center justify-center bg-black/80 px-4 py-10">
+      <div className="relative w-full max-w-md rounded-3xl border border-ph-border/80 bg-ph-bg p-6 text-sm text-ph-muted shadow-2xl">
+        <button
+          type="button"
+          className="absolute right-4 top-4 rounded-full border border-ph-border/60 bg-black/40 p-2 text-sm text-ph-muted transition hover:text-white"
+          onClick={onClose}
+          aria-label="Close contact information"
+        >
+          ✕
+        </button>
+        <p className="text-xs uppercase tracking-[0.2em] text-ph-muted/80">Direct contact</p>
+        <dl className="mt-6 space-y-4">
+          {CONTACT_DETAILS.map((detail) => (
+            <div key={detail.label} className="flex flex-col gap-1">
+              <dt className="text-[0.65rem] uppercase tracking-[0.3em] text-ph-muted/70">{detail.label}</dt>
+              {detail.href ? (
+                <dd>
+                  <a
+                    href={detail.href}
+                    className="text-base font-semibold text-white transition hover:text-ph-accent"
+                  >
+                    {detail.value}
+                  </a>
+                </dd>
+              ) : (
+                <dd className="text-base font-semibold text-white">{detail.value}</dd>
+              )}
+            </div>
+          ))}
+        </dl>
       </div>
     </div>
   );

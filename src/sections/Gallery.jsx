@@ -25,16 +25,6 @@ const IMAGES = [
     src: '/images/role-selector.svg',
     alt: 'Role selector for Judge, Collaborator, Prover, Consumer',
     caption: 'Role selector: Judge · Collaborator · Prover · Consumer'
-  },
-  {
-    src: '/images/graphics/norbert-kowalczyk-UAsQXiuTzSg-unsplash.jpg',
-    alt: 'Futuristic hallway with vanishing point lighting',
-    caption: 'Design inspiration: structured pathways for auditable reasoning'
-  },
-  {
-    src: '/images/graphics/steve-johnson-WhAQMsdRKMI-unsplash.jpg',
-    alt: 'Vibrant geometric gradients representing data synthesis',
-    caption: 'Visual language: bold gradients that mirror PlainHive’s multi-agent collaboration'
   }
 ];
 
