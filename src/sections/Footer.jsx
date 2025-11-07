@@ -87,7 +87,16 @@ export default function Footer() {
             </div>
           )}
         </div>
-        <p className="text-xs text-ph-muted text-center md:text-right">© {new Date().getFullYear()} PlainHive. Built for trustworthy AI.</p>
+        <nav className="flex flex-wrap items-center justify-center gap-6 md:justify-end">
+          <button
+            type="button"
+            onClick={() => setShowPrivacy(true)}
+            className="bg-transparent text-ph-muted transition hover:text-white focus:outline-none"
+          >
+            Privacy
+          </button>
+        </nav>
+        <p className="text-xs text-ph-muted">© {new Date().getFullYear()} PlainHive. Built for trustworthy AI.</p>
       </div>
       {showPrivacy && <PrivacyModal onClose={() => setShowPrivacy(false)} />}
     </footer>
