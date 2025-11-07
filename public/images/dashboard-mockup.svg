@@ -18,7 +18,7 @@
     <tspan x="364" y="196">• Regulation Shift Flagged</tspan>
   </text>
   <text font-family="'Inter', sans-serif" font-size="13" fill="#9BA8A1">
-    <tspan x="364" y="228">• Proposed Mitigation Timeline</tspan>
+    <tspan x="364" y="224">• Proposed Mitigation Timeline Only</tspan>
   </text>
   <rect x="344" y="260" width="244" height="96" rx="20" fill="#0B0E0C" stroke="#1C2520" />
   <text x="364" y="284" font-family="'Inter', sans-serif" font-size="14" fill="#9BA8A1">Export</text>
