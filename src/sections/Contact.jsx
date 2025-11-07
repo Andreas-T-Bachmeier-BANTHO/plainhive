@@ -1,10 +1,6 @@
 import Section from '../components/Section.jsx';
 
-const CONTACT_LINES = [
-  { value: 'PlainHive' },
-  { value: 'Andreas T. Bachmeier' },
-  { value: 'plainhive@gmail.com', href: 'mailto:plainhive@gmail.com' }
-];
+const CONTACT_EMAIL = 'plainhive@gmail.com';
 
 export default function Contact() {
   return (
@@ -35,7 +31,7 @@ export default function Contact() {
         </div>
       </div>
       <div className="mx-auto max-w-3xl text-lg text-ph-muted">
-        We partner with teams who need transparent, multi-agent intelligence. Reach out directly and we’ll schedule time to explore your goals.
+        Reach out directly and we’ll schedule time to explore your goals.
       </div>
       <div className="relative mt-10 flex justify-center">
         <div
@@ -43,22 +39,13 @@ export default function Contact() {
           className="w-full max-w-md rounded-3xl border border-ph-border/80 bg-black/40 p-6 text-center text-sm text-ph-muted shadow-subtle"
         >
           <p className="text-xs uppercase tracking-[0.2em] text-ph-muted/80">Direct contact</p>
-          <div className="mt-4 space-y-3">
-            {CONTACT_LINES.map((item) =>
-              item.href ? (
-                <a
-                  key={item.value}
-                  href={item.href}
-                  className="block text-lg font-semibold text-white transition hover:text-ph-accent"
-                >
-                  {item.value}
-                </a>
-              ) : (
-                <p key={item.value} className="text-lg font-semibold text-white">
-                  {item.value}
-                </p>
-              )
-            )}
+          <div className="mt-4">
+            <a
+              href={`mailto:${CONTACT_EMAIL}`}
+              className="block text-lg font-semibold text-white transition hover:text-ph-accent"
+            >
+              {CONTACT_EMAIL}
+            </a>
           </div>
         </div>
       </div>

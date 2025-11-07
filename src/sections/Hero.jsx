@@ -21,13 +21,14 @@ export default function Hero() {
             high-stakes work.
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
-            <a
-              href="mailto:plainhive@gmail.com"
-              onClick={() => track('hero_contact_email_click')}
-              className="text-center text-lg font-semibold text-white transition hover:text-ph-accent sm:text-left"
+            <Button
+              as="a"
+              href="#contact"
+              onClick={() => track('hero_contact_cta_click')}
+              className="w-full sm:w-auto"
             >
-              plainhive@gmail.com
-            </a>
+              Contact us to learn more
+            </Button>
             <Button
               variant="secondary"
               as="a"
