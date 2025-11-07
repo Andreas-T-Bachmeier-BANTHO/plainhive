@@ -14,7 +14,8 @@ const CONTACT_DETAILS = [
 ];
 
 export default function Footer() {
-  const [activeModal, setActiveModal] = useState(null);
+  const [showPrivacy, setShowPrivacy] = useState(false);
+  const [showContact, setShowContact] = useState(false);
 
   useEffect(() => {
     const handleOpen = () => setActiveModal('privacy');
@@ -23,8 +24,14 @@ export default function Footer() {
   }, []);
 
   useEffect(() => {
-    if (!activeModal) {
-      return undefined;
+    if (showPrivacy) {
+      setShowContact(false);
+      const { body } = document;
+      const originalOverflow = body.style.overflow;
+      body.style.overflow = 'hidden';
+      return () => {
+        body.style.overflow = originalOverflow;
+      };
     }
 
     const { body } = document;
@@ -46,29 +53,59 @@ export default function Footer() {
           <nav className="flex flex-wrap items-center justify-center gap-6 md:justify-end">
             <button
               type="button"
-              onClick={() =>
-                setActiveModal((modal) => (modal === 'contact' ? null : 'contact'))
-              }
-              aria-haspopup="dialog"
-              aria-expanded={activeModal === 'contact'}
+              onClick={() => setShowContact((prev) => !prev)}
+              aria-expanded={showContact}
+              aria-controls="footer-contact-details"
               className="bg-transparent text-ph-muted transition hover:text-white focus:outline-none"
             >
               Contact
             </button>
             <button
               type="button"
-              onClick={() =>
-                setActiveModal((modal) => (modal === 'privacy' ? null : 'privacy'))
-              }
-              aria-haspopup="dialog"
-              aria-expanded={activeModal === 'privacy'}
+              onClick={() => setShowPrivacy(true)}
               className="bg-transparent text-ph-muted transition hover:text-white focus:outline-none"
             >
               Privacy
             </button>
           </nav>
+          {showContact && (
+            <div
+              id="footer-contact-details"
+              className="w-full max-w-sm rounded-3xl border border-ph-border/80 bg-black/40 p-6 text-left text-sm text-ph-muted shadow-subtle"
+            >
+              <p className="text-xs uppercase tracking-[0.2em] text-ph-muted/80">Direct contact</p>
+              <dl className="mt-4 space-y-3">
+                {CONTACT_DETAILS.map((detail) => (
+                  <div key={detail.label} className="flex flex-col gap-1">
+                    <dt className="text-[0.65rem] uppercase tracking-[0.3em] text-ph-muted/70">{detail.label}</dt>
+                    {detail.href ? (
+                      <dd>
+                        <a
+                          href={detail.href}
+                          className="text-base font-semibold text-white transition hover:text-ph-accent"
+                        >
+                          {detail.value}
+                        </a>
+                      </dd>
+                    ) : (
+                      <dd className="text-base font-semibold text-white">{detail.value}</dd>
+                    )}
+                  </div>
+                ))}
+              </dl>
+            </div>
+          )}
         </div>
-        <p className="text-xs text-ph-muted text-center md:text-right">© {new Date().getFullYear()} PlainHive. Built for trustworthy AI.</p>
+        <nav className="flex flex-wrap items-center justify-center gap-6 md:justify-end">
+          <button
+            type="button"
+            onClick={() => setShowPrivacy(true)}
+            className="bg-transparent text-ph-muted transition hover:text-white focus:outline-none"
+          >
+            Privacy
+          </button>
+        </nav>
+        <p className="text-xs text-ph-muted">© {new Date().getFullYear()} PlainHive. Built for trustworthy AI.</p>
       </div>
       {activeModal === 'privacy' && <PrivacyModal onClose={closeModal} />}
       {activeModal === 'contact' && <ContactModal onClose={closeModal} />}
