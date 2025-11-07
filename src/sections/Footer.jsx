@@ -3,44 +3,75 @@ import Logo from '../components/Logo.jsx';
 
 const PRIVACY_EVENT = 'plainhive:open-privacy';
 
+const CONTACT_DETAILS = [
+  { label: 'Organization', value: 'PlainHive' },
+  { label: 'Name', value: 'Andreas T. Bachmeier' },
+  {
+    label: 'Email',
+    value: 'plainhive@gmail.com',
+    href: 'mailto:plainhive@gmail.com'
+  }
+];
+
 export default function Footer() {
-  const [showPrivacy, setShowPrivacy] = useState(false);
+  const [activeModal, setActiveModal] = useState(null);
 
   useEffect(() => {
-    const handleOpen = () => setShowPrivacy(true);
+    const handleOpen = () => setActiveModal('privacy');
     window.addEventListener(PRIVACY_EVENT, handleOpen);
     return () => window.removeEventListener(PRIVACY_EVENT, handleOpen);
   }, []);
 
   useEffect(() => {
-    if (showPrivacy) {
-      const { body } = document;
-      const originalOverflow = body.style.overflow;
-      body.style.overflow = 'hidden';
-      return () => {
-        body.style.overflow = originalOverflow;
-      };
+    if (!activeModal) {
+      return undefined;
     }
-    return undefined;
-  }, [showPrivacy]);
+
+    const { body } = document;
+    const originalOverflow = body.style.overflow;
+    body.style.overflow = 'hidden';
+
+    return () => {
+      body.style.overflow = originalOverflow;
+    };
+  }, [activeModal]);
+
+  const closeModal = () => setActiveModal(null);
 
   return (
     <footer className="border-t border-ph-border/60 bg-black/30 py-12">
-      <div className="mx-auto flex max-w-7xl flex-col gap-8 px-6 text-sm text-ph-muted md:flex-row md:items-center md:justify-between md:px-8">
+      <div className="mx-auto flex max-w-7xl flex-col gap-8 px-6 text-sm text-ph-muted md:flex-row md:items-start md:justify-between md:px-8">
         <Logo />
-        <div className="flex flex-col gap-2 text-center md:text-left">
-          <p className="text-xs uppercase tracking-[0.25em] text-ph-muted/80">Contact</p>
-          <p className="text-sm text-white">Andreas T. Bachmeier</p>
-          <a href="mailto:andreas.bachmeier@cdi.eu" className="text-sm text-ph-accent transition hover:text-white">
-            andreas.bachmeier@cdi.eu
-          </a>
+        <div className="flex flex-col items-center gap-6 text-center md:items-end md:text-right">
+          <nav className="flex flex-wrap items-center justify-center gap-6 md:justify-end">
+            <button
+              type="button"
+              onClick={() =>
+                setActiveModal((modal) => (modal === 'contact' ? null : 'contact'))
+              }
+              aria-haspopup="dialog"
+              aria-expanded={activeModal === 'contact'}
+              className="bg-transparent text-ph-muted transition hover:text-white focus:outline-none"
+            >
+              Contact
+            </button>
+            <button
+              type="button"
+              onClick={() =>
+                setActiveModal((modal) => (modal === 'privacy' ? null : 'privacy'))
+              }
+              aria-haspopup="dialog"
+              aria-expanded={activeModal === 'privacy'}
+              className="bg-transparent text-ph-muted transition hover:text-white focus:outline-none"
+            >
+              Privacy
+            </button>
+          </nav>
         </div>
-        <nav className="flex flex-wrap items-center justify-center gap-6 md:justify-end">
-          <a href="#" className="hover:text-white">Privacy</a>
-        </nav>
-        <p className="text-xs text-ph-muted">© {new Date().getFullYear()} PlainHive. Built for trustworthy AI.</p>
+        <p className="text-xs text-ph-muted text-center md:text-right">© {new Date().getFullYear()} PlainHive. Built for trustworthy AI.</p>
       </div>
-      {showPrivacy && <PrivacyModal onClose={() => setShowPrivacy(false)} />}
+      {activeModal === 'privacy' && <PrivacyModal onClose={closeModal} />}
+      {activeModal === 'contact' && <ContactModal onClose={closeModal} />}
     </footer>
   );
 }
@@ -157,6 +188,44 @@ function PrivacyModal({ onClose }) {
             </p>
           </section>
         </div>
+      </div>
+    </div>
+  );
+}
+
+function ContactModal({ onClose }) {
+  return (
+    <div className="fixed inset-0 z-[999] flex items-center justify-center bg-black/80 px-4 py-10">
+      <div className="relative max-h-[85vh] w-full max-w-md overflow-y-auto rounded-3xl border border-ph-border/80 bg-ph-bg p-8 shadow-2xl">
+        <button
+          type="button"
+          className="absolute right-4 top-4 rounded-full border border-ph-border/60 bg-black/40 p-2 text-sm text-ph-muted transition hover:text-white"
+          onClick={onClose}
+          aria-label="Close contact details"
+        >
+          ✕
+        </button>
+        <h2 className="text-2xl font-semibold text-white">Contact PlainHive</h2>
+        <p className="mt-2 text-sm text-ph-muted">Reach out directly and we’ll respond soon.</p>
+        <dl className="mt-6 space-y-4 text-sm text-ph-muted">
+          {CONTACT_DETAILS.map((detail) => (
+            <div key={detail.label} className="flex flex-col gap-1">
+              <dt className="text-[0.65rem] uppercase tracking-[0.3em] text-ph-muted/70">{detail.label}</dt>
+              {detail.href ? (
+                <dd>
+                  <a
+                    href={detail.href}
+                    className="text-base font-semibold text-white transition hover:text-ph-accent"
+                  >
+                    {detail.value}
+                  </a>
+                </dd>
+              ) : (
+                <dd className="text-base font-semibold text-white">{detail.value}</dd>
+              )}
+            </div>
+          ))}
+        </dl>
       </div>
     </div>
   );
