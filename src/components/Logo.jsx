@@ -1,7 +1,9 @@
 import { useState } from 'react';
 
-const WORDMARK_SRC = '/images/logo/Logo_Text_PlainHive_white.png';
-const GLYPH_SRC = '/images/logo/Logo_PlainHive_white.png';
+import { assetUrl } from '../lib/assetUrl.js';
+
+const WORDMARK_SRC = assetUrl('images/logo/Logo_Text_PlainHive_white.png');
+const GLYPH_SRC = assetUrl('images/logo/Logo_PlainHive_white.png');
 
 export default function Logo({ showWordmark = true, className = '' }) {
   const [failed, setFailed] = useState(false);

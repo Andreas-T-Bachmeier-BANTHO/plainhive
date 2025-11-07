@@ -1,4 +1,5 @@
 import Section from '../components/Section.jsx';
+import { assetUrl } from '../lib/assetUrl.js';
 
 const CONTACT_EMAIL = 'plainhive@gmail.com';
 
@@ -13,7 +14,7 @@ export default function Contact() {
       <div className="pointer-events-none absolute inset-0 -z-10 opacity-40">
         <div className="absolute -left-20 top-16 hidden h-64 w-64 overflow-hidden rounded-full border border-ph-border/40 bg-black/40 shadow-subtle lg:block">
           <img
-            src="/images/graphics/philip-oroni-bCkrMt4ETLo-unsplash.jpg"
+            src={assetUrl('images/graphics/philip-oroni-bCkrMt4ETLo-unsplash.jpg')}
             alt="Ambient neon lights representing modern technology"
             className="h-full w-full object-cover"
             loading="lazy"
@@ -22,7 +23,7 @@ export default function Contact() {
         </div>
         <div className="absolute -right-10 bottom-0 hidden h-40 w-40 overflow-hidden rounded-3xl border border-ph-border/40 bg-black/40 shadow-subtle md:block">
           <img
-            src="/images/graphics/igor-omilaev-IsYT5rUuVcs-unsplash.jpg"
+            src={assetUrl('images/graphics/igor-omilaev-IsYT5rUuVcs-unsplash.jpg')}
             alt="Abstract colorful light streaks"
             className="h-full w-full object-cover"
             loading="lazy"
