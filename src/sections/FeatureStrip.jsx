@@ -42,36 +42,18 @@ export default function FeatureStrip() {
             </span>
           ))}
         </div>
-        <div className="flex w-full max-w-md flex-col gap-6">
-          <figure className="overflow-hidden rounded-3xl border border-ph-border/80 bg-black/40 shadow-subtle">
-            <img
-              src="/images/graphics/CoverReport.png"
-              alt="PlainHive concept cover showing layered intelligence report"
-              className="w-full object-cover"
-              loading="lazy"
-              decoding="async"
-            />
-            <figcaption className="px-5 pb-5 text-xs text-ph-muted md:text-sm">
-              Layered briefings blend qualitative insights and quantitative checks, ready to share with stakeholders.
-            </figcaption>
-          </figure>
-          <div className="rounded-3xl border border-ph-border/80 bg-black/40 p-6 text-sm text-ph-muted shadow-subtle">
-            <p className="text-base font-semibold text-white">
-              Download the PlainHive Report
-            </p>
-            <p className="mt-3 leading-relaxed">
-              AI assistants are everywhere—ChatGPT hit 100M users in two months—but reliability lags. They hallucinate, hide their reasoning, and leave professionals without control, fueling a trust gap among developers and leaders. This report calls for a reset: from black-box chatbots to transparent, multi-agent assistants that verify facts, cite sources, show confidence—and truly collaborate.
-            </p>
-            <button
-              type="button"
-              onClick={handleDownload}
-              className="mt-5 inline-flex items-center justify-center rounded-full bg-ph-accent px-6 py-3 text-sm font-semibold uppercase tracking-[0.25em] text-black transition hover:bg-ph-accent/80 disabled:cursor-not-allowed disabled:opacity-60"
-              disabled={isDownloading}
-            >
-              {isDownloading ? 'Preparing download…' : 'Download now for free'}
-            </button>
-          </div>
-        </div>
+        <figure className="w-full max-w-md overflow-hidden rounded-3xl border border-ph-border/80 bg-black/40 shadow-subtle">
+          <img
+            src="/images/graphics/CoverReport.png"
+            alt="PlainHive concept cover showing layered intelligence report"
+            className="w-full object-cover"
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption className="px-5 pb-5 text-xs text-ph-muted md:text-sm">
+            Layered briefings blend qualitative insights and quantitative checks, ready to share with stakeholders.
+          </figcaption>
+        </figure>
       </div>
     </section>
   );
