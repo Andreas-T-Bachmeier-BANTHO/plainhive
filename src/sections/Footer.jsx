@@ -36,7 +36,13 @@ export default function Footer() {
           </a>
         </div>
         <nav className="flex flex-wrap items-center justify-center gap-6 md:justify-end">
-          <a href="#" className="hover:text-white">Privacy</a>
+          <button
+            type="button"
+            onClick={() => setShowPrivacy(true)}
+            className="bg-transparent text-ph-muted transition hover:text-white focus:outline-none"
+          >
+            Privacy
+          </button>
         </nav>
         <p className="text-xs text-ph-muted">© {new Date().getFullYear()} PlainHive. Built for trustworthy AI.</p>
       </div>
