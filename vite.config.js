@@ -1,10 +1,22 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
+const rawBase = process.env.VITE_BASE_URL;
+const normalizedBase = (() => {
+  if (!rawBase) {
+    return '/';
+  }
+
+  const trimmed = rawBase.trim();
+  if (!trimmed) {
+    return '/';
+  }
+
+  const withLeading = trimmed.startsWith('/') ? trimmed : `/${trimmed}`;
+  return withLeading.endsWith('/') ? withLeading : `${withLeading}/`;
+})();
+
 export default defineConfig({
-  // Use relative asset URLs so the site renders whether it is served from the
-  // repository subdirectory (e.g. username.github.io/project/) or from a
-  // custom domain at the root.
   base: './',
   plugins: [react()],
 });
