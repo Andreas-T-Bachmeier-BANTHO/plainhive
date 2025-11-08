@@ -2,15 +2,15 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// On CI for GitHub Pages, GITHUB_REPOSITORY is "owner/repo"
-const repo = process.env.GITHUB_REPOSITORY?.split('/')[1]
+// Optional override from CI/local env (most robust)
+const baseOverride = process.env.VITE_BASE
+
+// Auto-detect for GitHub Pages project pages
+const repo = process.env.GITHUB_REPOSITORY?.split('/')[1] ?? ''
 const isCI = process.env.GITHUB_ACTIONS === 'true'
 
-// Prefer explicit VITE_BASE (set in CI), otherwise fallback to repo-based detection
-const explicitBase = process.env.VITE_BASE
-
-// Use "/<repo>/" on Pages, "/" locally if no override provided
-const base = explicitBase ?? (isCI && repo ? `/${repo}/` : '/')
+// Final base: explicit override > auto-detect > local default
+const base = baseOverride ?? (isCI && repo ? `/${repo}/` : '/')
 
 export default defineConfig({
   plugins: [react()],
