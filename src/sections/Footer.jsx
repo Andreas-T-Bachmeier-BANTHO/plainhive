@@ -41,7 +41,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-ph-border/60 bg-black/30 py-12">
       <div className="mx-auto flex max-w-7xl flex-col gap-8 px-6 text-sm text-ph-muted md:flex-row md:items-start md:justify-between md:px-8">
-        <Logo className="self-center md:self-start" />
+        <Logo />
         <div className="flex flex-col items-center gap-6 text-center md:items-end md:text-right">
           <nav className="flex flex-wrap items-center justify-center gap-6 md:justify-end">
             <button
