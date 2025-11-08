@@ -17,6 +17,6 @@ const normalizedBase = (() => {
 })();
 
 export default defineConfig({
-  base: './',
+  base: normalizedBase,
   plugins: [react()],
 });
