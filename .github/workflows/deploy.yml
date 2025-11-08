@@ -17,8 +17,6 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      VITE_BASE_URL: ${{ vars.VITE_BASE_URL }}
 
     steps:
       - name: Checkout repository
@@ -30,32 +28,21 @@ jobs:
           node-version: '20'
           cache: 'npm'
 
-      - name: Configure Vite base URL
+      - name: Compute base path for Vite
         run: |
-          BASE="${VITE_BASE_URL:-}"
-          if [ -z "$BASE" ]; then
-            OWNER_LOWER="${GITHUB_REPOSITORY_OWNER,,}"
-            REPO_NAME="${GITHUB_REPOSITORY##*/}"
-            REPO_LOWER="${REPO_NAME,,}"
-            if [ "$REPO_LOWER" = "${OWNER_LOWER}.github.io" ]; then
-              BASE="/"
-            else
-              BASE="/$REPO_NAME/"
-            fi
+          OWNER_LOWER="${GITHUB_REPOSITORY_OWNER,,}"
+          REPO_NAME="${GITHUB_REPOSITORY##*/}"
+
+          if [ "${REPO_NAME,,}" = "${OWNER_LOWER}.github.io" ]; then
+            BASE="/"
+          else
+            BASE="/$REPO_NAME/"
           fi
 
-          if [ "$BASE" != "/" ]; then
-            BASE="/${BASE#/}"
-            case "$BASE" in
-              */) : ;;
-              *) BASE="$BASE/" ;;
-            esac
-          fi
-
-          echo "Using base path $BASE"
+          echo "Using base path: $BASE"
           {
-            echo "VITE_BASE_URL=$BASE"
             echo "VITE_BASE=$BASE"
+            echo "VITE_BASE_URL=$BASE"
           } >> "$GITHUB_ENV"
 
       - name: Install dependencies
@@ -63,6 +50,10 @@ jobs:
 
       - name: Build project
         run: npm run build
+
+      # SPA fallback so deep links / refreshes work on GH Pages
+      - name: Add 404 fallback
+        run: cp dist/index.html dist/404.html
 
       - name: Upload production artifact
         uses: actions/upload-pages-artifact@v3
@@ -75,7 +66,6 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
