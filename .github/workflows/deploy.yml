@@ -22,15 +22,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Configure Vite base URL
-        run: |
-          REPO_NAME="${GITHUB_REPOSITORY#*/}"
-          if [ "$REPO_NAME" = "${GITHUB_REPOSITORY_OWNER}.github.io" ]; then
-            echo "VITE_BASE_URL=/" >> "$GITHUB_ENV"
-          else
-            echo "VITE_BASE_URL=/${REPO_NAME}/" >> "$GITHUB_ENV"
-          fi
-
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
@@ -38,7 +29,7 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci --ignore-scripts
+        run: npm ci
 
       - name: Build project
         run: npm run build
