@@ -3,7 +3,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 // Optional override from CI/local env (most robust)
-const baseOverride = process.env.VITE_BASE
+const baseOverride = process.env.VITE_BASE ?? process.env.VITE_BASE_URL
 
 // Auto-detect for GitHub Pages project pages
 const repo = process.env.GITHUB_REPOSITORY?.split('/')[1] ?? ''
