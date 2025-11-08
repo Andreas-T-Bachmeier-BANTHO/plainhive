@@ -1,4 +1,5 @@
 import Section from '../components/Section.jsx';
+import { assetUrl } from '../lib/assetUrl.js';
 
 const USE_CASES = [
   {
@@ -32,7 +33,7 @@ export default function UseCases() {
         </div>
         <figure className="overflow-hidden rounded-3xl border border-ph-border/80 bg-black/40 shadow-subtle">
           <img
-            src="/images/dashboard-mockup.svg"
+            src={assetUrl('images/dashboard-mockup.svg')}
             alt="Mock dashboard view of PlainHive with reasoning threads and exports"
             className="w-full"
             loading="lazy"
