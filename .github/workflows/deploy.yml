@@ -17,6 +17,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      VITE_BASE_URL: ${{ vars.VITE_BASE_URL }}
 
     steps:
       - name: Checkout repository
@@ -27,6 +29,31 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
+
+      - name: Configure Vite base URL
+        run: |
+          BASE="${VITE_BASE_URL:-}"
+          if [ -z "$BASE" ]; then
+            OWNER_LOWER="${GITHUB_REPOSITORY_OWNER,,}"
+            REPO_NAME="${GITHUB_REPOSITORY##*/}"
+            REPO_LOWER="${REPO_NAME,,}"
+            if [ "$REPO_LOWER" = "${OWNER_LOWER}.github.io" ]; then
+              BASE="/"
+            else
+              BASE="/$REPO_NAME/"
+            fi
+          fi
+
+          if [ "$BASE" != "/" ]; then
+            BASE="/${BASE#/}"
+            case "$BASE" in
+              */) : ;;
+              *) BASE="$BASE/" ;;
+            esac
+          fi
+
+          echo "Using VITE_BASE_URL=$BASE"
+          echo "VITE_BASE_URL=$BASE" >> "$GITHUB_ENV"
 
       - name: Install dependencies
         run: npm ci
